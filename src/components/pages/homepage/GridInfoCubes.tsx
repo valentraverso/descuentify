@@ -1,4 +1,4 @@
-export default function Typeform() {
+export default function GridInfoCubes() {
     return (
         <section>
             <h2>¿Porque usar Descuentify?</h2>
