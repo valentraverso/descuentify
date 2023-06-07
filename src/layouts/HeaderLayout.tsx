@@ -2,9 +2,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '@/styles/general.module.scss';
 import Link from 'next/link';
-interface Props {}
+interface Props { }
 
-function HeaderLayout () {
+function HeaderLayout() {
     const lastScrollTop = useRef(0);
     const [isNavBarVisible, setIsNavBarVisible] = useState(true)
 
@@ -29,27 +29,27 @@ function HeaderLayout () {
         //     "scroll", handleScroll
         // )
     }, [])
-  return (
-    
-    <nav className={`${isNavBarVisible ? styles['nav-visible'] : "nav"
-}`}>
-{
-    isNavBarVisible
-        ?
-        <>
-            <div className={styles['nav-items']}>
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-            </div>
-            {/* <img className={styles['spacebusinessLOGO']} src="/assets/img/spacebusinessLOGO.png" alt="space business" /> */}
-        </>
-        :
-        ''
-}
-</nav>
-  )
+    return (
+
+        <nav className={`${isNavBarVisible ? styles['nav-visible'] : "nav"
+            }`}>
+            {
+                isNavBarVisible
+                    ?
+                    <>
+                        <div className={styles['nav-items']}>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                        </div>
+                        {/* <img className={styles['spacebusinessLOGO']} src="/assets/img/spacebusinessLOGO.png" alt="space business" /> */}
+                    </>
+                    :
+                    ''
+            }
+        </nav>
+    )
 }
 
 export default HeaderLayout
