@@ -1,0 +1,22 @@
+@import '/src/styles/abstracts/variables';
+
+.container-principal-banner{
+    height: 90vh;
+
+    background-color: $primaryDarkGreen;
+}
+
+.first-text-main{
+    font-size: $h1;
+    font-family: 'Nexa-Heavy';
+    color: #fff;
+    padding: 20% 0;
+    display: block;
+}
+
+.container-grid-principal{
+    display: grid;
+    grid-template-columns: auto 40%;
+    width: 60%;
+    margin: auto;
+}

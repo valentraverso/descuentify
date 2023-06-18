@@ -1,0 +1,25 @@
+@import "../abstracts/variables";
+
+*{
+    @font-face { 
+        font-family: Nexa-Light; src: url('/assets/font/Nexa-ExtraLight.ttf') format('truetype'); 
+    }
+    @font-face{
+        font-family: Nexa-Heavy; src: url('/assets/font/Nexa-Heavy.ttf') format('truetype'); 
+    }
+    font-family: Nexa-Light;
+    margin: 0;
+}
+
+p,
+span {
+    font-size: $p;
+}
+
+h1{
+    font-size: $h1;
+}
+
+h2{
+    font-size: $h2;
+}

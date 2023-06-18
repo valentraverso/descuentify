@@ -2,9 +2,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '@/styles/general.module.scss';
 import Link from 'next/link';
-interface Props {}
+interface Props { }
 
-function HeaderLayout () {
+function HeaderLayout() {
     const lastScrollTop = useRef(0);
     const [isNavBarVisible, setIsNavBarVisible] = useState(true)
 
