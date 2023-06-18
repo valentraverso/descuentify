@@ -21,24 +21,23 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     width: 100%;
     height: 72px;
     box-shadow: 0 1px 8px $primaryGreen;
     background: $primaryDarkGreen;
     transition: 0.5s;
 
-    .spacebusinessLOGO {
+    .LOGO {
 
-        width: 50px;
+        width: 130px;
         height: 50px;
-        border-radius: 50%;
     }
 
     .nav-items {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 20px;
 
         .link {
 
