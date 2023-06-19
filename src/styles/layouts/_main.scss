@@ -31,9 +31,18 @@
     transition: 0.5s;
 
     .LOGO {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 60px;
+        background-image: url("../../../public/assets/img/main/Descuentify.png");
 
-        width: 130px;
-        height: 50px;
+        @media only screen and (max-width: 720px) {
+            background-image: url("../../../public/assets/img/main/LogoMA.png");
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .nav-items {
@@ -49,10 +58,15 @@
             display: grid;
             place-items: center;
             font-size: $h3;
+
             &:hover {
                 font-size: $h2;
                 color: $primaryGreen;
             }
+        }
+
+        .header-button {
+            border: none;
         }
     }
 }

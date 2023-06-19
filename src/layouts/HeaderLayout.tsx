@@ -38,13 +38,14 @@ function HeaderLayout() {
                     ?
                     <>
                         <div className={styles['nav-items']}>
-                            <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" />
+                            <div className={styles['LOGO']}></div>
+                            {/* <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" /> */}
                             <Link className={styles.link} href={'value'}>text</Link>
                             <Link className={styles.link} href={'value'}>text</Link>
                             <Link className={styles.link} href={'value'}>text</Link>
                         </div>
                         <div>
-                            <button>Contact</button>
+                            <button className={styles['primaryButton']}>Contact</button>
                         </div>
                     </>
                     :

@@ -9,7 +9,7 @@ export default function PrincipalBanner() {
                     <span className={styles["first-text-main"]}>Bienvenido a la revolución de la fidelización.</span>
                 </div>
                 <div>
-                    <img className={styles['mobile-img']} src="/assets/images/main/mobile-map-iphone.png" alt='image mobile' />
+                    <img className={styles['mobile-img']} src="/assets/img/main/mobile-map-iphone.png" alt='image mobile' />
                 </div>
             </div>
         </section>
