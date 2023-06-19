@@ -1,22 +1,46 @@
 @import '/src/styles/abstracts/variables';
 
-.container-principal-banner{
+.container-principal-banner {
     height: 90vh;
 
     background-color: $primaryDarkGreen;
 }
 
 .first-text-main{
-    font-size: $h1;
+    font-size: 65px;
     font-family: 'Nexa-Heavy';
     color: #fff;
-    padding: 20% 0;
+    padding: 5% 0;
     display: block;
+
+    .purple {
+        font-size: 65px;
+        color: #918EF4;
+    }
 }
 
-.container-grid-principal{
+.container-grid-principal {
     display: grid;
     grid-template-columns: auto 40%;
     width: 60%;
     margin: auto;
+}
+
+.principal-button-main {
+    padding: 20px 40px;
+
+    background: $white;
+
+    border-radius: 30px;
+    font-family: $heavyFont;
+
+    &:hover {
+        background-color: $primaryDarkGreen;
+
+        border: 3px solid $white;
+
+        color: $white;
+
+        cursor: pointer;
+    }
 }
