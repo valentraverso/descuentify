@@ -8,6 +8,8 @@
     width: 100%;
     box-shadow: 0 10px 20px $white;
     transition: 0.5s;
+    background: $primaryDarkGreen;
+
 }
 
 .nav-visible {
@@ -21,24 +23,32 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     width: 100%;
     height: 72px;
     //box-shadow: 0 1px 8px $primaryGreen;
     background: $primaryDarkGreen;
     transition: 0.5s;
 
-    .spacebusinessLOGO {
+    .LOGO {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 60px;
+        background-image: url("../../../public/assets/img/main/Descuentify.png");
 
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
+        @media only screen and (max-width: 720px) {
+            background-image: url("../../../public/assets/img/main/LogoMA.png");
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .nav-items {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 20px;
 
         .link {
 
@@ -48,10 +58,15 @@
             display: grid;
             place-items: center;
             font-size: $h3;
+
             &:hover {
                 font-size: $h2;
                 color: $primaryGreen;
             }
+        }
+
+        .header-button {
+            border: none;
         }
     }
 }

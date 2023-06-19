@@ -10,7 +10,7 @@ export default function PrincipalBanner() {
                     <span className={styles["principal-button-main"]}>Me quiero unir</span>
                 </div>
                 <div>
-                    <Image src="/assets/images/main/mobile-map-iphone.png" alt='image mobile' width={500} height={500} />
+                    <img className={styles['mobile-img']} src="/assets/img/main/mobile-map-iphone.png" alt='image mobile' />
                 </div>
             </div>
         </section>

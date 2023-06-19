@@ -2,8 +2,11 @@
 
 .container-principal-banner {
     height: 90vh;
-
+    width: 100%;
     background-color: $primaryDarkGreen;
+    @media only screen and (max-width: 720px) {
+        height: 51vh;
+    }
 }
 
 .first-text-main{
@@ -17,13 +20,50 @@
         font-size: 65px;
         color: #918EF4;
     }
+    @media only screen and (max-width: 720px) {
+        padding: 5% 2% 0 2% ;
+    }
 }
 
 .container-grid-principal {
     display: grid;
-    grid-template-columns: auto 40%;
     width: 60%;
     margin: auto;
+    grid-template-columns: auto 40%;
+    @media only screen and (max-width: 720px) {
+        margin: 0 auto;
+        width: 100%;
+       display: block;
+    }
+
+    .mobile-img{
+        width: 500px;
+        height: 500px;
+
+        @media only screen and (max-width: 720px) {
+           width: 350px;
+           height: 350px;
+        }
+    }
+}
+
+.principal-button-main {
+    padding: 20px 40px;
+
+    background: $white;
+
+    border-radius: 30px;
+    font-family: $heavyFont;
+
+    &:hover {
+        background-color: $primaryDarkGreen;
+
+        border: 3px solid $white;
+
+        color: $white;
+
+        cursor: pointer;
+    }
 }
 
 .principal-button-main {
