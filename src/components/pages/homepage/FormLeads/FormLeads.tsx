@@ -15,6 +15,9 @@ export default function FormLeads() {
                     <button type="submit">Me quiero unir!</button>
                 </form>
             </div>
+            <div className={styles['image-side-form']}>
+
+            </div>
         </section>
     )
 }
