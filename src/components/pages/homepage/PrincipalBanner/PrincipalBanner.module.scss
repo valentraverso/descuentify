@@ -1,26 +1,33 @@
 @import '/src/styles/abstracts/variables';
 
-.container-principal-banner{
-    height: 90vh;
+.container-principal-banner {
+    height: 95vh;
     width: 100%;
     background-color: $primaryDarkGreen;
+
+    padding-top: 15vh;
     @media only screen and (max-width: 720px) {
         height: 51vh;
     }
 }
 
 .first-text-main{
-    font-size: $h1;
+    font-size: 65px;
     font-family: 'Nexa-Heavy';
     color: #fff;
-    padding: 20% 0;
+    padding: 5% 0;
     display: block;
+
+    .purple {
+        font-size: 65px;
+        color: #918EF4;
+    }
     @media only screen and (max-width: 720px) {
         padding: 5% 2% 0 2% ;
     }
 }
 
-.container-grid-principal{
+.container-grid-principal {
     display: grid;
     width: 60%;
     margin: auto;
@@ -39,5 +46,43 @@
            width: 350px;
            height: 350px;
         }
+    }
+}
+
+.principal-button-main {
+    padding: 20px 40px;
+
+    background: $white;
+
+    border-radius: 30px;
+    font-family: $heavyFont;
+
+    &:hover {
+        background-color: $primaryDarkGreen;
+
+        border: 3px solid $white;
+
+        color: $white;
+
+        cursor: pointer;
+    }
+}
+
+.principal-button-main {
+    padding: 20px 40px;
+
+    background: $white;
+
+    border-radius: 30px;
+    font-family: $heavyFont;
+
+    &:hover {
+        background-color: $primaryDarkGreen;
+
+        border: 3px solid $white;
+
+        color: $white;
+
+        cursor: pointer;
     }
 }

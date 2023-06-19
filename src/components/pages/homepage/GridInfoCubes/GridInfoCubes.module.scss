@@ -8,10 +8,13 @@
     background-color: white;
 
     padding: 80px 0;
+
+    height: 90vh;
 }
-.h2{
+.h2 {
     background-color: white;
 }
+
 .container-grid-three {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -19,7 +22,7 @@
 
 }
 
-.container-block-why{
+.container-block-why {
     display: flex;
     background-color: white;
 
@@ -33,22 +36,18 @@
     margin: 20px auto;
 
     border: 1px solid $grey;
-   // box-shadow: 2px 2px 10p -5px $black;
+    // box-shadow: 2px 2px 10p -5px $black;
 
     border-radius: 5px;
-    .span{
-    background-color: white;
 
-    }
-    &:hover{
+
+    &:hover {
         background-color: $grey;
         opacity: 0.8;
         cursor: pointer;
     }
 }
 
-.title-block-why{
+.title-block-why {
     font-family: $heavyFont;
-    background-color: white;
-
 }
