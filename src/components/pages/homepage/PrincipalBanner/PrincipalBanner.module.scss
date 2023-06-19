@@ -1,9 +1,11 @@
 @import '/src/styles/abstracts/variables';
 
 .container-principal-banner {
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     background-color: $primaryDarkGreen;
+
+    padding-top: 15vh;
     @media only screen and (max-width: 720px) {
         height: 51vh;
     }

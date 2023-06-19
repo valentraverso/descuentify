@@ -12,8 +12,11 @@ export default function FormLeads() {
                     <input type="email" />
                     <label htmlFor="">Numero</label>
                     <input type="phone" />
-                    <button type="submit">Me quiero unir!</button>
+                    <button className={styles['submit-form-leads']} type="submit">¡Quiero ser parte!</button>
                 </form>
+            </div>
+            <div className={styles['image-side-form']}>
+
             </div>
         </section>
     )
