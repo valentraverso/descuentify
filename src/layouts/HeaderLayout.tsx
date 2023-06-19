@@ -29,30 +29,29 @@ function HeaderLayout() {
         //     "scroll", handleScroll
         // )
     }, [])
-  return (
-    
-    <nav className={`${isNavBarVisible ? styles['nav-visible'] : "nav"
-}`}>
-{
-    isNavBarVisible
-        ?
-        <>
-            <div className={styles['nav-items']}>
-                <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" />
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-                <Link className={styles.link} href={'value'}>text</Link>
-            </div>
-            <div>
-                <button>Contact</button>
-            </div>
-        </>
-        :
-        ''
-}
-</nav>
-  )
+    return (
+
+        <nav className={`${isNavBarVisible ? styles['nav-visible'] : "nav"
+            }`}>
+            {
+                isNavBarVisible
+                    ?
+                    <>
+                        <div className={styles['nav-items']}>
+                            <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" />
+                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href={'value'}>text</Link>
+                        </div>
+                        <div>
+                            <button>Contact</button>
+                        </div>
+                    </>
+                    :
+                    <div className={styles['nav-none']}></div>
+            }
+        </nav>
+    )
 }
 
 export default HeaderLayout

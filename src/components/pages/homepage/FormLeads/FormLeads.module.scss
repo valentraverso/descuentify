@@ -1,3 +1,6 @@
+@import '/src/styles/abstracts/_variables.scss';
+
+
 .container-section-leads {
     display: flex;
     justify-content: center;
@@ -5,18 +8,25 @@
     align-items: center;
 
     padding: 80px 0;
-
+    background-color: white;
     background-size: cover;
     background-position: center;
 }
 
 .container-inside-leads {
     padding: 5%;
+    background-color: white;
 
     border-radius: 5px;
+    .h2{
+    background-color: white;
+
+    }
 }
 
 .container-form-leads {
+    background-color: white;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
