@@ -1,0 +1,36 @@
+@import '/src/styles/abstracts/_variables.scss';
+
+
+.container-FAQs {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+color: $white;
+    .container-question {
+        width: 600px;
+        height: 150px;
+        background-color: $white;
+
+        .head {
+            display: flex;
+            height: 50px;
+
+            .icon{
+                width: 20%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .question{
+                margin-left: 10px;
+                width: 80%;
+                font-size: $h2;
+            }
+        }
+
+        .answer{
+            padding:  10px 10px 10px 10px ;
+        }
+    }
+
+}
