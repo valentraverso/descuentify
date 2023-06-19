@@ -38,15 +38,18 @@ function HeaderLayout() {
                     ?
                     <>
                         <div className={styles['nav-items']}>
-                            <Link className={styles.link} href={'value'}>text</Link>
+                            <div className={styles['LOGO']}></div>
+                            {/* <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" /> */}
                             <Link className={styles.link} href={'value'}>text</Link>
                             <Link className={styles.link} href={'value'}>text</Link>
                             <Link className={styles.link} href={'value'}>text</Link>
                         </div>
-                        {/* <img className={styles['spacebusinessLOGO']} src="/assets/img/spacebusinessLOGO.png" alt="space business" /> */}
+                        <div>
+                            <button className={styles['primaryButton']}>Contact</button>
+                        </div>
                     </>
                     :
-                    ''
+                    <div className={styles['nav-none']}></div>
             }
         </nav>
     )

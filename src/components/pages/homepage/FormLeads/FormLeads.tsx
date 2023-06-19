@@ -4,7 +4,7 @@ export default function FormLeads() {
     return (
         <section className={styles['container-section-leads']}>
             <div className={styles['container-inside-leads']}>
-                <h2>¿Te gustaria fidelizar más clientes?</h2>
+                <h2 className={styles.h2}>¿Te gustaria fidelizar más clientes?</h2>
                 <form className={styles['container-form-leads']}>
                     <label htmlFor="">Nombre</label>
                     <input type="text" />
