@@ -16,7 +16,7 @@ function FAQs() {
     })
 
     return (
-        <div className={styles['container-FAQs']}>
+        <div className={styles['container-FAQs']} id='FAQs'>
             <img className={styles['jungle4']} src='/assets/img/main/jungle4.png' alt='jungle decoration' />
             <div className={styles['container-title']}>
                 <h2 className={styles.title}>Preguntas frecuentes 🤔</h2>

@@ -1,8 +1,9 @@
+"use client"
 import styles from './FormLeads.module.scss'
 
 export default function FormLeads() {
     return (
-        <section className={styles['container-section-leads']}>
+        <section className={styles['container-section-leads']} id='Contact'>
             <div className={styles['container-inside-leads']}>
                 <h2 className={styles.h2}>¿Te gustaria fidelizar más clientes?</h2>
                 <form className={styles['container-form-leads']}>

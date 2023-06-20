@@ -1,12 +1,13 @@
+"use client"
 import React from 'react';
 import styles from './About.module.scss';
 import Image from 'next/image';
 
 interface Props {}
 
-const About = () => {
+function About() {
   return (
-    <div className={styles['container-about']}>
+    <div className={styles['container-about']} id='About'>
 
 
         <div className={styles['container-title']}>
