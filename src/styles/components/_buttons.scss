@@ -1,6 +1,23 @@
 @import '../abstracts/variables';
 
+.principal-button-header {
+    padding: 5px 10px;
 
+    background: $white;
+
+    border-radius: 30px;
+    font-family: $heavyFont;
+
+    &:hover {
+        background-color: $primaryDarkGreen;
+
+        border: 3px solid $white;
+
+        color: $white;
+
+        cursor: pointer;
+    }
+}
 
 .container-buttons {
     width: 100%;

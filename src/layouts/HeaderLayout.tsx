@@ -45,7 +45,7 @@ function HeaderLayout() {
                             <Link className={styles.link} href={'value'}>text</Link>
                         </div>
                         <div>
-                            <button className={styles['primaryButton']}>Contact</button>
+                            <button className={styles['principal-button-header']}>Contact</button>
                         </div>
                     </>
                     :
