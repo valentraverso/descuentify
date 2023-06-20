@@ -6,12 +6,17 @@
     background-color: $primaryDarkGreen;
 
     padding-top: 15vh;
+
     @media only screen and (max-width: 720px) {
-        height: 51vh;
+        height: 85vh;
+        padding-top: 5vh;
+        border-bottom-left-radius: 45% 5%;
+        border-bottom-right-radius: 45% 5%;
+
     }
 }
 
-.first-text-main{
+.first-text-main {
     font-size: 65px;
     font-family: 'Nexa-Heavy';
     color: #fff;
@@ -21,9 +26,17 @@
     .purple {
         font-size: 65px;
         color: #918EF4;
+
+        @media only screen and (max-width: 720px) {
+            font-size: 45px;
+        }
+
     }
+
     @media only screen and (max-width: 720px) {
-        padding: 5% 2% 0 2% ;
+        padding: 5% 2% 5% 2% ;
+        font-size: 45px;
+
     }
 }
 
@@ -32,19 +45,22 @@
     width: 60%;
     margin: auto;
     grid-template-columns: auto 40%;
+
     @media only screen and (max-width: 720px) {
-        margin: 0 auto;
         width: 100%;
-       display: block;
+        display: block;
+        margin: 0 auto;
     }
 
-    .mobile-img{
+    .mobile-img {
         width: 500px;
         height: 500px;
 
         @media only screen and (max-width: 720px) {
-           width: 350px;
-           height: 350px;
+            width: 350px;
+            height: 350px;
+            margin: 0 auto;
+            
         }
     }
 }
@@ -66,6 +82,12 @@
 
         cursor: pointer;
     }
+    @media only screen and (max-width: 720px) {
+    padding: 10px 20px;
+
+    }
+
+
 }
 
 .principal-button-main {
@@ -85,13 +107,29 @@
 
         cursor: pointer;
     }
+
+    @media only screen and (max-width: 720px) {
+        display: flex;
+        justify-content: center;
+        margin: 0 15% 0 15% ;
+        padding: 10px 20px;
+    
+        }
+    
 }
 
-.container-text{
-    margin: 50px 0 0 0 ;
+.container-text {
+    margin: 50px 0 0 0;
     padding: 8px 8px 8px 10px;
     border-left: 5px solid $white;
-    .text{
+
+    .text {
         font-size: $h2;
     }
+
+    @media only screen and (max-width: 720px) {
+    margin: 5% 0 0 15%;
+
+    }
+    
 }

@@ -1,0 +1,77 @@
+@import '/src/styles/abstracts/_variables.scss';
+
+
+.container-about{
+
+    margin: 5%;
+
+    .container-title{
+        display: flex;
+        justify-content: center;
+
+        .title{
+            font-size: h2;
+        }
+
+        @media screen and (max-width: 720px){
+           padding: 3%;
+        }
+
+    }
+
+    .container-separation{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+
+
+        .container-side{
+                .side-title{
+                    color: $black; 
+                    text-align: center;
+                }
+
+                .container-list{
+                    @media screen and (max-width: 720px){
+                        padding: 3%;
+                    }
+
+                    .row{
+                        display: flex;
+                        gap: 10px;
+                        @media screen and (max-width: 720px){
+                            justify-content: center;
+                        }
+
+                        .icon{
+                            margin: auto 0;
+                        }
+                        .p{
+                            font-size: $p;
+                            margin: auto 0;
+
+                        }
+                    }
+
+                }
+        }
+
+        .colum{
+           background-color: $black;
+            width: 3px;
+            height: 20vh;
+            margin: 2% 0;
+
+        @media screen and (max-width: 720px){ display: none;}
+
+
+        }
+        @media screen and (max-width: 720px){
+    
+            display: block;
+        }
+    }
+
+
+
+}
