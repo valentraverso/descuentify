@@ -17,7 +17,7 @@ const About = () => {
 
             <div className={styles['container-side']}>
                 
-                    <h3 className={styles['side-title']}>Usuario</h3>
+                    <h3 className={styles['side-title']}>👤 Usuario</h3>
 
                     <div className={styles['container-list']}>
                         <div className={styles.row}>
@@ -44,7 +44,7 @@ const About = () => {
             <div className={styles['colum']}></div>
             <div className={styles['container-side']}>
                 
-                    <h3 className={styles['side-title']}>Compania</h3>
+                    <h3 className={styles['side-title']}>🏪 Compania</h3>
 
                     <div className={styles['container-list']}>
                         <div className={styles.row}>
