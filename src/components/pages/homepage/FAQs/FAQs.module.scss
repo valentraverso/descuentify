@@ -2,34 +2,55 @@
 
 
 .container-FAQs {
-    background-color: $white;
-    display: flex;
-    justify-content: center;
-color: $white;
+    margin: 0 0 0 50px;
+
     .container-question {
-        width: 600px;
-        height: 150px;
-        background-color: $white;
+        width: 800px;
+        height: fit-content;
+        padding: 5px 5px 5px 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px $grey;
+        background-color: $secondaryLightGreen;
+        margin: 0 auto;
+        margin-bottom: 10px;
 
-        .head {
-            display: flex;
-            height: 50px;
+        .container-head {
 
-            .icon{
-                width: 20%;
+            .head {
                 display: flex;
-                justify-content: center;
-            }
-            
-            .question{
-                margin-left: 10px;
-                width: 80%;
-                font-size: $h2;
+                height: 30px;
+
+                .container-icon {
+                    width: 10%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 12px 0 0 0;
+
+                    .icon {
+                        margin: 0 auto;
+                    }
+                }
+
+                .question {
+                    width: 100%;
+                    font-size: $h2;
+                }
             }
         }
 
-        .answer{
-            padding:  10px 10px 10px 10px ;
+
+        .container-answer {
+
+            .answer {
+                height: fit-content;
+                padding: 10px 10px 10px 10%;
+                background-color: $secondaryLightGreen;
+
+
+                .hr {
+                    color: $white;
+                }
+            }
         }
     }
 

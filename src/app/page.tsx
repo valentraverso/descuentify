@@ -8,8 +8,8 @@ export default function Home() {
     <main>
       <PrincipalBanner />
       <GridInfoCubes />
-      <FormLeads />
       <FAQs />
+      <FormLeads />
     </main>
   )
 }
