@@ -2,7 +2,7 @@
 
 
 .container-FAQs {
-    margin: 0 0 0 50px;
+    //margin: 0 0 0 50px;
 
     .container-question {
         width: 800px;
@@ -10,15 +10,15 @@
         padding: 5px 5px 5px 5px;
         border-radius: 5px;
         box-shadow: 1px 1px 5px $grey;
-        background-color: $secondaryLightGreen;
+        background-color: $primaryDarkGreen;
         margin: 0 auto;
         margin-bottom: 10px;
-
+color: $white;
         .container-head {
 
             .head {
                 display: flex;
-                height: 30px;
+                height: fit-content;
 
                 .container-icon {
                     width: 10%;
@@ -40,11 +40,10 @@
 
 
         .container-answer {
-
             .answer {
                 height: fit-content;
                 padding: 10px 10px 10px 10%;
-                background-color: $secondaryLightGreen;
+                background-color: $primaryDarkGreen;
 
 
                 .hr {
@@ -52,6 +51,50 @@
                 }
             }
         }
-    }
 
+
+        @media screen and (max-width: 720px) {
+
+            width: 100%;
+            margin: 5px;
+
+            .container-head {
+                .head {
+                    display: flex;
+                    height: fit-content;
+
+                    .container-icon {
+                        width: 10%;
+                        display: flex;
+                        justify-content: center;
+                        padding: 12px 0 0 0;
+
+                        .icon {
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .question {
+                        width: 100%;
+                        font-size: $h3-mobile;
+                    }
+                }
+            }
+
+
+            .container-answer {
+
+                .answer {
+                    height: fit-content;
+                    padding: 10px 10px 10px 10%;
+                    background-color: $primaryDarkGreen;
+
+
+                    .hr {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
 }
