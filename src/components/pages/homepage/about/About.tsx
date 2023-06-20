@@ -21,46 +21,48 @@ const About = () => {
 
                     <div className={styles['container-list']}>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
+                            <div className={styles.icon} >🔷</div>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
+                            <div className={styles.icon} >🔷</div>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
+                            <div className={styles.icon} >🔷</div>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
+                            <div className={styles.icon} >🔷</div>
                         </div>
                     </div>
                
 
 
             </div>
-            <div className={styles['colum']}></div>
+
+            {/* <div className={styles['colum']}></div> */}
+            <Image src='/assets/img/main/FifyMA.png' alt='Fify' width={200} height={200}/>
             <div className={styles['container-side']}>
                 
-                    <h3 className={styles['side-title']}>🏪 Compania</h3>
+                    <h3 className={styles['side-title']}>🏪 Compañia</h3>
 
                     <div className={styles['container-list']}>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
+                            <div className={styles.icon} >🔷</div>
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
+                            <div className={styles.icon} >🔷</div>
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
+                            <div className={styles.icon} >🔷</div>
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
                         </div>
                         <div className={styles.row}>
-                            <Image className={styles.icon} src='/assets/svg/check.svg' alt='arrow-rigth' width={15} height={15} />
+                            <div className={styles.icon} >🔷</div>
                             <p className={styles.p}>ya tu sape, dice el bananero</p>
                         </div>
                     </div>

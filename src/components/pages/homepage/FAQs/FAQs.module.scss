@@ -4,6 +4,14 @@
 .container-FAQs {
     margin: 5%;
 
+    .container-title {
+        padding: 3%;
+
+        .title {
+            text-align: center;
+        }
+    }
+
     .container-question {
         width: 800px;
         height: fit-content;
@@ -13,7 +21,8 @@
         background-color: $primaryDarkGreen;
         margin: 0 auto;
         margin-bottom: 10px;
-color: $white;
+        color: $white;
+
         .container-head {
 
             .head {

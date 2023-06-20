@@ -17,7 +17,9 @@ function FAQs() {
 
     return (
         <div className={styles['container-FAQs']}>
-
+            <div className={styles['container-title']}>
+                <h2 className={styles.title}>FAQs</h2>
+            </div>
             {/* QUESTION 1 */}
             <div onClick={() => setOpen({ ...open, question1: !open.question1 })} className={styles['container-question']}>
                 <div className={styles['container-head']}>
