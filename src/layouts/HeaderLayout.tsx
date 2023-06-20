@@ -40,9 +40,9 @@ function HeaderLayout() {
                         <div className={styles['nav-items']}>
                             <div className={styles['LOGO']}></div>
                             {/* <img className={styles['LOGO']} src="/assets/img/Descuentify.png" alt="logo" /> */}
-                            <Link className={styles.link} href={'value'}>text</Link>
-                            <Link className={styles.link} href={'value'}>text</Link>
-                            <Link className={styles.link} href={'value'}>text</Link>
+                            <Link className={styles.link} href='#About'>About</Link>
+                            <Link className={styles.link} href='#FAQs'>FAQs</Link>
+                            <Link className={styles.link} href='#Contact'>Contact</Link>
                         </div>
                         <div>
                             <button className={styles['principal-button-header']}>Contact</button>

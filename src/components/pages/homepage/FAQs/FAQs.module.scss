@@ -4,6 +4,36 @@
 .container-FAQs {
     margin: 5%;
 
+    .container-title {
+        padding: 3%;
+
+        .title {
+            text-align: center;
+        }
+
+       
+    }
+    .jungle2 {
+        position: absolute;
+        width: 150px;
+        height: 170px;
+        left: 23%;
+        //bottom: -125%;
+        z-index: -1;
+        @media screen and (max-width: 720px) {
+            display: none;
+        }
+    }
+    .jungle4 {
+        position: absolute;
+        width: 150px;
+        height: 170px;
+        right: 23%;
+        z-index: -1;
+        @media screen and (max-width: 720px) {
+            display: none;
+        }
+    }
     .container-question {
         width: 800px;
         height: fit-content;
@@ -13,7 +43,8 @@
         background-color: $primaryDarkGreen;
         margin: 0 auto;
         margin-bottom: 10px;
-color: $white;
+        color: $white;
+
         .container-head {
 
             .head {
