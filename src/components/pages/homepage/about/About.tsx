@@ -43,7 +43,7 @@ const About = () => {
             </div>
 
             {/* <div className={styles['colum']}></div> */}
-            <Image src='/assets/img/main/FifyMA.png' alt='Fify' width={200} height={200}/>
+            <Image className={styles['colum']} src='/assets/img/main/FifyMA.png' alt='Fify' width={200} height={200}/>
             <div className={styles['container-side']}>
                 
                     <h3 className={styles['side-title']}>🏪 Compañia</h3>

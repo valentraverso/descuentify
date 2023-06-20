@@ -17,8 +17,10 @@ function FAQs() {
 
     return (
         <div className={styles['container-FAQs']}>
+            <img className={styles['jungle4']} src='/assets/img/main/jungle4.png' alt='jungle decoration' />
             <div className={styles['container-title']}>
-                <h2 className={styles.title}>FAQs</h2>
+                <h2 className={styles.title}>Preguntas frecuentes 🤔</h2>
+
             </div>
             {/* QUESTION 1 */}
             <div onClick={() => setOpen({ ...open, question1: !open.question1 })} className={styles['container-question']}>
@@ -191,6 +193,7 @@ function FAQs() {
 
 
 
+            <img className={styles['jungle2']} src='/assets/img/main/jungle2.png' alt='jungle decoration' />
 
         </div>
     )
