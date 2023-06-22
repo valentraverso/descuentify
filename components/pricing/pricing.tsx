@@ -51,9 +51,9 @@ export const Pricing: React.FC<PricingProps> = (props) => {
               sx={
                 plan.isRecommended
                   ? {
-                      borderColor: "primary.500",
+                      borderColor: "green.500",
                       _dark: {
-                        borderColor: "primary.500",
+                        borderColor: "green.500",
                         bg: "blackAlpha.300",
                       },
                     }
@@ -69,7 +69,7 @@ export const Pricing: React.FC<PricingProps> = (props) => {
                   )
                 )}
               </PricingFeatures>
-              <ButtonLink colorScheme="primary" {...plan.action}>
+              <ButtonLink colorScheme="green" {...plan.action}>
                 {plan.action.label || "Sign Up"}
               </ButtonLink>
             </PricingBox>
@@ -104,7 +104,7 @@ export interface PricingFeatureProps {
 }
 
 const PricingFeature: React.FC<PricingFeatureProps> = (props) => {
-  const { title, iconColor = "primary.500" } = props;
+  const { title, iconColor = "green.500" } = props;
   return (
     <HStack>
       <Icon as={FiCheck} color={iconColor} />

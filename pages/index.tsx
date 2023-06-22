@@ -234,7 +234,7 @@ const HighlightsSection = () => {
             py="1"
             ps="8"
             pe="2"
-            bg="primary.900"
+            bg="green.900"
             _dark={{ bg: "gray.900" }}
           >
             <Box>

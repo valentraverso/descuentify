@@ -34,7 +34,7 @@ const siteConfig = {
       {
         label: 'Sign Up',
         href: '/signup',
-        variant: 'primary',
+        variant: 'green',
       },
     ],
   },
