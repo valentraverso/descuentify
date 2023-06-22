@@ -98,8 +98,8 @@ const HeroSection: React.FC = () => {
             title={
               <FallInPlace>
                 Bienvenidos a la
-                <Br /> revolucion de la
-                <Em color='green'> Fidelizacion </Em>
+                <Br /> Revolución de la
+                <Em color='green'> Fidelización</Em>
               </FallInPlace>
             }
             description={
@@ -111,7 +111,7 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={0.8}>
               <HStack pt="4" pb="12" spacing="8">
               <FallInPlace delay={0.4} fontWeight="black">
-                <Em>|  </Em> "Hacer que vuelvas"
+                <Em pr={2}>|</Em> Hacer que vuelvas
               </FallInPlace>
               </HStack>
 
