@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Bienvenidos a la 
+                Bienvenidos a la
                 <Br /> revolucion de la
                 <Em color='green'> Fidelizacion </Em>
               </FallInPlace>
@@ -198,7 +198,7 @@ const HeroSection: React.FC = () => {
             iconPosition: "left",
             delay: 1,
           },
-          
+
         ]}
         reveal={FallInPlace}
       />
@@ -251,6 +251,7 @@ const HighlightsSection = () => {
           </Flex>
         </VStack>
       </HighlightsItem>
+
       <HighlightsItem title="Solid foundations">
         <Text color="muted" fontSize="lg">
           We don&apos;t like to re-invent the wheel, neither should you. We
@@ -323,16 +324,15 @@ const FeaturesSection = () => {
           textAlign="left"
           as="p"
         >
-          Not your standard
-          <Br /> dashboard template.
+          Tarjetas de fidelizacion digital
+          <Br /> <Em>Es gratis!</Em>
         </Heading>
       }
       description={
         <>
-          Saas UI Pro includes everything you need to build modern frontends.
+          Dile adiós a los métodos tradicionales y descubre cómo nuestra app revoluciona la forma en que premias a tus clientes.
           <Br />
-          Use it as a template for your next product or foundation for your
-          design system.
+          ¡Convierte tu negocio en un referente digital y comienza a cosechar los beneficios de la tecnología con Descuentify!.
         </>
       }
       align="left"
@@ -459,16 +459,16 @@ const FaqSection = () => {
 
 export default Home;
 
-export async function getStaticProps() {
-  return {
-    props: {
-      announcement: {
-        title: "Support us by becoming a stargazer! 🚀 ",
-        description:
-          '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
-        href: "https://github.com/saas-js/saas-ui",
-        action: false,
-      },
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       announcement: {
+//         title: "Support us by becoming a stargazer! 🚀 ",
+//         description:
+//           '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
+//         href: "https://github.com/saas-js/saas-ui",
+//         action: false,
+//       },
+//     },
+//   };
+// }
