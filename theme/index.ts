@@ -23,8 +23,8 @@ const styles = {
 export default extendTheme(
   {
     config: {
-      initialColorMode: 'dark',
-      useSystemColorMode: false,
+      initialColorMode: 'light',
+      useSystemColorMode: true,
     },
     styles,
     fontSizes,

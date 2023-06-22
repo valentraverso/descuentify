@@ -7,7 +7,7 @@ export default {
     'nav-link': (props: Dict) => {
       const { isActive } = props
 
-      const hoverColor = mode('gray.900', 'white')(props)
+      const hoverColor = mode('green.900', 'white')(props)
       return {
         outline: 'none',
         fontWeight: '500',

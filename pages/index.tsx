@@ -114,8 +114,8 @@ const HeroSection: React.FC = () => {
                 <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
               </HStack>
 
-              <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
+              <ButtonGroup spacing={4} alignItems="center" >
+                <ButtonLink colorScheme="green" size="lg" href="/signup">
                   Sign Up
                 </ButtonLink>
                 <ButtonLink
@@ -151,6 +151,7 @@ const HeroSection: React.FC = () => {
           >
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
+                {/* change-img */}
                 <Image
                   src="/static/screenshots/list.png"
                   layout="fixed"
@@ -267,7 +268,7 @@ const HighlightsSection = () => {
         name="Renata Alink"
         description="Founder"
         avatar="/static/images/avatar.jpg"
-        gradient={["pink.200", "purple.500"]}
+        gradient={["pink.200", "green.500"]}
       >
         “Saas UI helped us set up a beautiful modern UI in no time. It saved us
         hundreds of hours in development time and allowed us to focus on
@@ -304,7 +305,7 @@ const HighlightsSection = () => {
             <Tag
               key={value}
               variant="subtle"
-              colorScheme="purple"
+              colorScheme="green"
               rounded="full"
               px="3"
             >
