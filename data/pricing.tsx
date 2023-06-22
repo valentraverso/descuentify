@@ -6,7 +6,7 @@ export default {
     'Pay once and get life-time access to our high quality components.',
   plans: [
     {
-      id: 'oss',
+      id: 'COOPER',
       title: 'COPPER',
       description: 'Basic compoents, perfect to get started.',
       price: 'Free',
@@ -32,7 +32,7 @@ export default {
       },
     },
     {
-      id: 'bootstrap',
+      id: 'SILVER',
       title: 'SILVER',
       description: 'Complete frontend stack for bootstrappers and small teams.',
       price: '€14.99',
@@ -67,7 +67,7 @@ export default {
       },
     },
     {
-      id: 'startup',
+      id: 'GOLD',
       title: 'GOLD',
       description: 'Unlimited license for growing teams.',
       price: (
