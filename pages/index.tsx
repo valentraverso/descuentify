@@ -211,52 +211,20 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="Nuestra mision">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+           
+            Descuentify tiene como objetivo recompensar la lealtad de los clientes a través de recompensas especiales y descuentos exclusivos. Sabemos que en un mercado competitivo como el actual, los consumidores tienen muchas opciones. Reconocer y recompensar su lealtad es fundamental para mantenerlos comprometidos con una marca en particular.
           </Text>
 
-          <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="green.900"
-            _dark={{ bg: "gray.900" }}
-          >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{" "}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
-            <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            />
-          </Flex>
+          
         </VStack>
       </HighlightsItem>
 
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="Tarjetas de fidelizacion">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+        Las tarjetas de fidelización online permiten a los usuarios acumular puntos mediante el escaneo de códigos QR.
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
@@ -271,31 +239,30 @@ const HighlightsSection = () => {
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
+        title="Revolucionario 🚀"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          Conocer a tus clientes y hacer que vuelvan, nunca fue tan facil. Si te identificas con alguna de estas categorias de empresa, unite a la revolucion.
         </Text>
         <Wrap mt="8">
           {[
-            "authentication",
-            "navigation",
-            "crud",
-            "settings",
-            "multi-tenancy",
-            "layouts",
-            "billing",
-            "a11y testing",
-            "server-side rendering",
-            "documentation",
-            "onboarding",
-            "storybooks",
-            "theming",
-            "upselling",
-            "unit testing",
-            "feature flags",
-            "responsiveness",
+            "Restaurantes",
+            "Coctelerias",
+            "Medicos particulares",
+            "Masajistas",
+            "Indumentaria",
+            "Supermerkat",
+            "Librerias",
+            "Hotel",
+            "Coffe-shop",
+            "Comida rapida",
+            "Floreria",
+            "Ecommers",
+            "Ferreteria",
+            "Servicio de limpieza",
+            "Lavanderia",
+            "Discotecas",
+            "Y muchas mas...",
           ].map((value) => (
             <Tag
               key={value}
