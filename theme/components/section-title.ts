@@ -19,15 +19,15 @@ const SectionTitle = {
     default: (props: any) => ({
       title: {},
       description: {
-        color: mode('gray.500', 'gray.400')(props),
+        color: mode('gray.500', 'white')(props),
       },
     }),
     dark: {
       title: {
-        color: 'gray.800',
+        color: 'white',
       },
       description: {
-        color: 'gray.700',
+        color: 'white',
       },
     },
     light: (props: any) => ({

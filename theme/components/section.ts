@@ -7,7 +7,7 @@ const Section = {
   variants: {
     subtle: {},
     solid: {
-      bg: 'primary.400',
+      bg: 'green.400',
     },
     alternate: ({ colorMode }: any) => ({
       bg: colorMode === 'dark' ? 'gray.800' : 'gray.50',

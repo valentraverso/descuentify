@@ -6,31 +6,25 @@ export default {
     'Pay once and get life-time access to our high quality components.',
   plans: [
     {
-      id: 'oss',
-      title: 'Open Source',
+      id: 'COOPER',
+      title: 'COPPER',
       description: 'Basic compoents, perfect to get started.',
       price: 'Free',
       features: [
         {
-          title: 'MIT License',
+          title: '1 Recompensas',
         },
         {
-          title: 'Authentication (Clerk/Supabase/Magic)',
+          title: '1 Local',
         },
         {
-          title: 'Form (react-hook-form)',
+          title: '150 usuarios',
         },
         {
-          title: 'Modals manager',
+          title: '',
         },
         {
-          title: 'Hotkeys',
-        },
-        {
-          title: 'Web3 components',
-        },
-        {
-          title: 'And much more...',
+          title: '',
         },
       ],
       action: {
@@ -38,37 +32,34 @@ export default {
       },
     },
     {
-      id: 'bootstrap',
-      title: 'Bootstrap',
+      id: 'SILVER',
+      title: 'SILVER',
       description: 'Complete frontend stack for bootstrappers and small teams.',
-      price: 'Free',
+      price: '€14.99',
       isRecommended: true,
       features: [
         {
-          title: 'One project',
+          title: '10 Recompensas',
         },
         {
-          title: 'One developer',
+          title: '2 locales',
         },
         {
-          title: 'Advanced components',
+          title: 'Usuarios Ilimitados',
         },
         {
-          title: 'Multiple themes',
+          title: 'Local destacado 🥈',
         },
         {
-          title: 'Next.js and Electron boilerplates',
+          title: 'Reconpensas multi-local',
         },
         {
-          title: 'Private discord community',
-        },
-        {
-          title: '1 year of updates',
+          title: '',
         },
         null,
         {
-          title: 'Private beta access',
-          iconColor: 'green.500',
+          title: 'Soporte',
+          iconColor: 'yellow.500',
         },
       ],
       action: {
@@ -76,34 +67,40 @@ export default {
       },
     },
     {
-      id: 'startup',
-      title: 'Startup',
+      id: 'GOLD',
+      title: 'GOLD',
       description: 'Unlimited license for growing teams.',
       price: (
         <HStack>
           <Text textDecoration="line-through" fontSize="sm" color="gray.400">
-            €999,-
+            €47.99
           </Text>
-          <Text>€499,-</Text>
+          <Text>€25.98</Text>
         </HStack>
       ),
       features: [
         {
-          title: 'Unlimited projects',
+          title: 'Recompensas ilimitadas',
         },
         {
-          title: 'Unlimited developers',
+          title: 'Locales ilimitados',
         },
         {
-          title: '1 year of updates',
+          title: 'Usuarios ilimitados',
         },
         {
-          title: 'Everything from Bootstrap',
+          title: 'Local destacado 🥇',
+        },
+        {
+          title: 'Integracion API',
+        },
+        {
+          title: '',
         },
         null,
         {
-          title: 'Private beta access',
-          iconColor: 'green.500',
+          title: 'Soporte',
+          iconColor: 'yellow.500',
         },
       ],
       action: {

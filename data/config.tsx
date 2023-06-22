@@ -8,8 +8,8 @@ import { Logo } from './logo'
 const siteConfig = {
   logo: Logo,
   seo: {
-    title: 'Saas UI',
-    description: 'The React component library for startups',
+    title: 'Descuentify',
+    description: 'Tarjetas de fidelizacion online',
   } as NextSeoProps,
   termsUrl: '#',
   privacyUrl: '#',
@@ -34,7 +34,7 @@ const siteConfig = {
       {
         label: 'Sign Up',
         href: '/signup',
-        variant: 'primary',
+        variant: 'green',
       },
     ],
   },

@@ -65,8 +65,8 @@ const Home: NextPage = () => {
   return (
     <Box>
       <SEO
-        title="Saas UI Landingspage"
-        description="Free SaaS landingspage starter kit"
+        title="DescuentifyApp"
+        description="Tarjetas de fidelizacion online"
       />
       <Box>
         <HeroSection />
@@ -97,25 +97,26 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Bienvenidos a la
+                <Br /> Revolución de la
+                <Em color='green'> Fidelización</Em>
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{" "}
-                build intuitive SaaS products with speed.
+                Crea recompensas para tus clientes y gana trafico!
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
               <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
+              <FallInPlace delay={0.4} fontWeight="black">
+                <Em pr={2}>|</Em> Hacer que vuelvas
+              </FallInPlace>
               </HStack>
 
-              <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
+              <ButtonGroup spacing={4} alignItems="center" >
+                <ButtonLink colorScheme="green" size="lg" href="/signup">
                   Sign Up
                 </ButtonLink>
                 <ButtonLink
@@ -151,6 +152,7 @@ const HeroSection: React.FC = () => {
           >
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
+                {/* change-img */}
                 <Image
                   src="/static/screenshots/list.png"
                   layout="fixed"
@@ -168,42 +170,35 @@ const HeroSection: React.FC = () => {
 
       <Features
         id="benefits"
-        columns={[1, 2, 4]}
-        iconSize={4}
+        columns={[1, 2, 3]}
+        iconSize={6}
         innerWidth="container.xl"
         pt="20"
         features={[
           {
-            title: "Accessible",
+            title: "Simple",
             icon: FiSmile,
-            description: "All components strictly follow WAI-ARIA standards.",
+            description: "Con una interfaz intuitiva y fácil de usar, configurar y gestionar tu programa de recompensas nunca ha sido tan sencillo. Olvídate de complicaciones y dedica más tiempo a hacer crecer tu negocio mientras Descuentify se encarga de mantener a tus clientes comprometidos y felices.",
             iconPosition: "left",
             delay: 0.6,
           },
           {
-            title: "Themable",
+            title: "Rapido",
             icon: FiSliders,
             description:
-              "Fully customize all components to your brand with theme support and style props.",
+              "Implementa el programa de fidelización en cuestión de minutos. Otorga recompensas de forma instantánea y observa cómo tus clientes se mantienen leales a tu negocio en un abrir y cerrar de ojos. No pierdas tiempo, acelera tu éxito.",
             iconPosition: "left",
             delay: 0.8,
           },
           {
-            title: "Composable",
+            title: "Rentable",
             icon: FiGrid,
             description:
-              "Compose components to fit your needs and mix them together to create new ones.",
+              "No solo fortaleces la lealtad de tus clientes, sino que también obtienes un retorno de inversión significativo. Atrae a nuevos clientes, aumenta tus ventas y maximiza tus ganancias.Te brindamos la estrategia ideal para un crecimiento rentable y sostenible.",
             iconPosition: "left",
             delay: 1,
           },
-          {
-            title: "Productive",
-            icon: FiThumbsUp,
-            description:
-              "Designed to reduce boilerplate and fully typed, build your product at speed.",
-            iconPosition: "left",
-            delay: 1.1,
-          },
+
         ]}
         reveal={FallInPlace}
       />
@@ -233,7 +228,7 @@ const HighlightsSection = () => {
             py="1"
             ps="8"
             pe="2"
-            bg="primary.900"
+            bg="green.900"
             _dark={{ bg: "gray.900" }}
           >
             <Box>
@@ -256,6 +251,7 @@ const HighlightsSection = () => {
           </Flex>
         </VStack>
       </HighlightsItem>
+
       <HighlightsItem title="Solid foundations">
         <Text color="muted" fontSize="lg">
           We don&apos;t like to re-invent the wheel, neither should you. We
@@ -267,7 +263,7 @@ const HighlightsSection = () => {
         name="Renata Alink"
         description="Founder"
         avatar="/static/images/avatar.jpg"
-        gradient={["pink.200", "purple.500"]}
+        gradient={["pink.200", "green.500"]}
       >
         “Saas UI helped us set up a beautiful modern UI in no time. It saved us
         hundreds of hours in development time and allowed us to focus on
@@ -304,7 +300,7 @@ const HighlightsSection = () => {
             <Tag
               key={value}
               variant="subtle"
-              colorScheme="purple"
+              colorScheme="green"
               rounded="full"
               px="3"
             >
@@ -328,16 +324,15 @@ const FeaturesSection = () => {
           textAlign="left"
           as="p"
         >
-          Not your standard
-          <Br /> dashboard template.
+          Tarjetas de fidelizacion digital
+          <Br /> <Em>Es gratis!</Em>
         </Heading>
       }
       description={
         <>
-          Saas UI Pro includes everything you need to build modern frontends.
+          Dile adiós a los métodos tradicionales y descubre cómo nuestra app revoluciona la forma en que premias a tus clientes.
           <Br />
-          Use it as a template for your next product or foundation for your
-          design system.
+          ¡Convierte tu negocio en un referente digital y comienza a cosechar los beneficios de la tecnología con Descuentify!.
         </>
       }
       align="left"
@@ -464,16 +459,16 @@ const FaqSection = () => {
 
 export default Home;
 
-export async function getStaticProps() {
-  return {
-    props: {
-      announcement: {
-        title: "Support us by becoming a stargazer! 🚀 ",
-        description:
-          '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
-        href: "https://github.com/saas-js/saas-ui",
-        action: false,
-      },
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       announcement: {
+//         title: "Support us by becoming a stargazer! 🚀 ",
+//         description:
+//           '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
+//         href: "https://github.com/saas-js/saas-ui",
+//         action: false,
+//       },
+//     },
+//   };
+// }
