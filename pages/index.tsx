@@ -228,14 +228,12 @@ const HighlightsSection = () => {
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
-        name="Renata Alink"
-        description="Founder"
+        name="TARJETA"
+        description="CEREZA"
         avatar="/static/images/avatar.jpg"
         gradient={["pink.200", "green.500"]}
       >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
+        “PONER UNA RECOMPENSA DE EJEMPLO”
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
