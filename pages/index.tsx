@@ -154,11 +154,11 @@ const HeroSection: React.FC = () => {
               <Box overflow="hidden" height="100%">
                 {/* change-img */}
                 <Image
-                  src="/static/screenshots/list.png"
+                  src="/static/images/mobileapp.png"
                   layout="fixed"
-                  width={1200}
-                  height={762}
-                  alt="Screenshot of a ListPage in Saas UI Pro"
+                  width={900}
+                  height={900}
+                  alt="Screenshot of Descuentify app"
                   quality="75"
                   priority
                 />
