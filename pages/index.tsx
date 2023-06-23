@@ -156,8 +156,8 @@ const HeroSection: React.FC = () => {
                 <Image
                   src="/static/images/mobileapp.png"
                   layout="fixed"
-                  width={900}
-                  height={900}
+                  width={600}
+                  height={600}
                   alt="Screenshot of Descuentify app"
                   quality="75"
                   priority
