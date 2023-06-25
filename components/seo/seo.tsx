@@ -8,7 +8,7 @@ export const SEO = ({ title, description, ...props }: SEOProps) => (
   <NextSeo
     title={title}
     description={description}
-    openGraph={{ ...siteConfig.seo.openGraph, title, description }}
+    openGraph={{ ...siteConfig.seo.logo, title, description }}
     titleTemplate={siteConfig.seo.titleTemplate}
     twitter={siteConfig.seo.twitter}
     {...props}
