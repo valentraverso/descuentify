@@ -1,15 +1,15 @@
 import { HStack, Text } from '@chakra-ui/react'
 
 export default {
-  title: 'Pricing for every stage',
+  title: 'Precios',
   description:
-    'Pay once and get life-time access to our high quality components.',
+    'Encuentra un plan para potenciar tu negocio',
   plans: [
     {
       id: 'COOPER',
       title: 'COPPER',
-      description: 'Basic compoents, perfect to get started.',
-      price: 'Free',
+      description: 'Fideliza a clientes con nuestras tarjetas de fidelizacion',
+      price: '¡Gratis!',
       features: [
         {
           title: '1 Recompensas',
@@ -20,12 +20,7 @@ export default {
         {
           title: '150 usuarios',
         },
-        {
-          title: '',
-        },
-        {
-          title: '',
-        },
+        
       ],
       action: {
         href: '#',
@@ -34,18 +29,18 @@ export default {
     {
       id: 'SILVER',
       title: 'SILVER',
-      description: 'Complete frontend stack for bootstrappers and small teams.',
-      price: '€14.99',
+      description: 'Ideal para grandes companias',
+      price: '€18.99',
       isRecommended: true,
       features: [
         {
-          title: '10 Recompensas',
+          title: '5 Recompensa por local',
         },
         {
-          title: '2 locales',
+          title: '3 locales',
         },
         {
-          title: 'Usuarios Ilimitados',
+          title: 'Usuarios 2000',
         },
         {
           title: 'Local destacado 🥈',
@@ -53,9 +48,7 @@ export default {
         {
           title: 'Reconpensas multi-local',
         },
-        {
-          title: '',
-        },
+        
         null,
         {
           title: 'Soporte',
@@ -69,13 +62,13 @@ export default {
     {
       id: 'GOLD',
       title: 'GOLD',
-      description: 'Unlimited license for growing teams.',
+      description: '¿Eres una compania que le importan sus clientes?',
       price: (
         <HStack>
           <Text textDecoration="line-through" fontSize="sm" color="gray.400">
-            €47.99
+            €37.99
           </Text>
-          <Text>€25.98</Text>
+          <Text>€25.99</Text>
         </HStack>
       ),
       features: [
@@ -92,10 +85,10 @@ export default {
           title: 'Local destacado 🥇',
         },
         {
-          title: 'Integracion API',
+          title: 'Reconpensas multi-local',
         },
         {
-          title: '',
+          title: 'Integracion API',
         },
         null,
         {

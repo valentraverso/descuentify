@@ -27,21 +27,21 @@ import { Em } from "components/typography";
 import { NextjsLogo, ChakraLogo } from "components/logos";
 import {
   FiArrowRight,
-  FiBox,
-  FiCheck,
-  FiCode,
-  FiCopy,
-  FiFlag,
+  FiBarChart2,
+  FiCloud,
+  FiDollarSign,
+  FiFeather,
   FiGrid,
-  FiLock,
-  FiSearch,
+  FiMap,
+  FiNavigation2,
+  FiSlack,
   FiSliders,
   FiSmile,
-  FiTerminal,
-  FiThumbsUp,
-  FiToggleLeft,
+  FiTrello,
   FiTrendingUp,
+  FiUserCheck,
   FiUserPlus,
+  FiZap,
 } from "react-icons/fi";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
 
         <FeaturesSection />
 
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         <PricingSection />
 
@@ -184,7 +184,7 @@ const HeroSection: React.FC = () => {
           },
           {
             title: "Rapido",
-            icon: FiSliders,
+            icon: FiZap,
             description:
               "Implementa el programa de fidelización en cuestión de minutos. Otorga recompensas de forma instantánea y observa cómo tus clientes se mantienen leales a tu negocio en un abrir y cerrar de ojos. No pierdas tiempo, acelera tu éxito.",
             iconPosition: "left",
@@ -192,7 +192,7 @@ const HeroSection: React.FC = () => {
           },
           {
             title: "Rentable",
-            icon: FiGrid,
+            icon: FiDollarSign,
             description:
               "No solo fortaleces la lealtad de tus clientes, sino que también obtienes un retorno de inversión significativo. Atrae a nuevos clientes, aumenta tus ventas y maximiza tus ganancias.Te brindamos la estrategia ideal para un crecimiento rentable y sostenible.",
             iconPosition: "left",
@@ -289,8 +289,8 @@ const FeaturesSection = () => {
           textAlign="left"
           as="p"
         >
-          Tarjetas de fidelizacion digital
-          <Br /> <Em>Es gratis!</Em>
+          ¿Porque tener Descuentify?
+          <Br /> <Em color='green.500'>¡Es gratis!</Em>
         </Heading>
       }
       description={
@@ -305,71 +305,66 @@ const FeaturesSection = () => {
       iconSize={4}
       features={[
         {
-          title: "Components.",
-          icon: FiBox,
+          title: "Trafico.",
+          icon: FiNavigation2,
           description:
-            "All premium components are available on a private NPM registery, no more copy pasting and always up-to-date.",
+            "Potencia la visibilidad de tu negocio y capta la atención de un mayor número de personas.",
           variant: "inline",
         },
         {
-          title: "Starterkits.",
-          icon: FiLock,
+          title: "Fidelizacion.",
+          icon: FiUserCheck,
           description:
-            "Example apps in Next.JS, Electron. Including authentication, billing, example pages, everything you need to get started FAST.",
+            "Con ella, podrás ofrecerles beneficios exclusivos, recompensas personalizadas y promociones especiales.",
           variant: "inline",
         },
         {
-          title: "Documentation.",
-          icon: FiSearch,
+          title: "Estadisticas.",
+          icon: FiTrello,
           description:
-            "Extensively documented, including storybooks, best practices, use-cases and examples.",
+            "Obtén información valiosa y detallada sobre tus ventas, clientes y rentabilidad de las recompensas.",
           variant: "inline",
         },
         {
-          title: "Onboarding.",
-          icon: FiUserPlus,
-          description:
-            "Add user onboarding flows, like tours, hints and inline documentation without breaking a sweat.",
-          variant: "inline",
-        },
-        {
-          title: "Feature flags.",
-          icon: FiFlag,
-          description:
-            "Implement feature toggles for your billing plans with easy to use hooks. Connect Flagsmith, or other remote config services once you're ready.",
-          variant: "inline",
-        },
-        {
-          title: "Upselling.",
+          title: "Publicidad.",
           icon: FiTrendingUp,
           description:
-            "Components and hooks for upgrade flows designed to make upgrading inside your app frictionless.",
+            "Aprovecha  las herramientas de segmentación y las estrategias publicitarias personalizadas",
           variant: "inline",
         },
         {
-          title: "Themes.",
-          icon: FiToggleLeft,
+          title: "AI.",
+          icon: FiSlack,
+          description:
+            "Una variedad imensa de opciones de fidelazion, Recompensas, Descuentos, Tarjetas de regalo, Servicios y aun mas.",
+          variant: "inline",
+        },
+        {
+          title: "Ranking.",
+          icon: FiBarChart2,
+          description:
+            "Obtén una visión clara de tu posición en comparación con la competencia y motiva a tus clientes a alcanzar los primeros puestos..",
+          variant: "inline",
+        },
+        {
+          title: "API.",
+          icon: FiCloud,
+          description:
+            "Obtendrás un mayor control y flexibilidad para adaptar nuestra app a tus necesidades específicas, optimizando así tu experiencia empresarial.",
+          variant: "inline",
+        },
+        {
+          title: "Internacional.",
+          icon: FiMap,
+          description: 
+          "Brindar recompensas en cualquier país. Premia a tus clientes en todo el mundo con regalos especiales.",
+          variant: "inline",
+        },
+        {
+          title: "Amigable con el ecosistema.",
+          icon: FiFeather,
           description:
             "Includes multiple themes with darkmode support, always have the perfect starting point for your next project.",
-          variant: "inline",
-        },
-        {
-          title: "Generators.",
-          icon: FiTerminal,
-          description:
-            "Extend your design system while maintaininig code quality and consistency with built-in generators.",
-          variant: "inline",
-        },
-        {
-          title: "Monorepo.",
-          icon: FiCode,
-          description: (
-            <>
-              All code is available as packages in a high-performance{" "}
-              <Link href="https://turborepo.com">Turborepo</Link>, you have full
-              control to modify and adjust it to your workflow.
-            </>
-          ),
           variant: "inline",
         },
       ]}
@@ -412,7 +407,7 @@ const PricingSection = () => {
   return (
     <Pricing {...pricing}>
       <Text p="8" textAlign="center" color="muted">
-        VAT may be applicable depending on your location.
+        {/* VAT may be applicable depending on your location. */}
       </Text>
     </Pricing>
   );

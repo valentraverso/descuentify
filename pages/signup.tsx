@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import NextLink from 'next/link'
-import { Box, Center, FormControl, FormHelperText, FormLabel, Input, InputGroup, InputLeftAddon, Stack, Text, WrapItem } from '@chakra-ui/react'
+import { Box, Center, FormControl, FormHelperText, FormLabel, Input, InputGroup, InputLeftAddon, Stack, Text, Wrap, WrapItem } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { Features } from 'components/features'
 import { BackgroundGradient } from 'components/gradients/background-gradient'
@@ -52,30 +52,22 @@ const Login: NextPage = () => {
           spacing="20"
           flexDirection={{ base: 'column', lg: 'row' }}
         >
-          <Box pe="20">
-            <NextLink href="/">
+          <Box 
+          borderRadius={50}
+          pe="20">
+            {/* <NextLink href="/">
               <Box
                 as={siteConfig.logo}
                 width="160px"
                 ms="4"
                 mb={{ base: 0, lg: 16 }}
               />
-            </NextLink>
-            <Features
-              display={{ base: 'none', lg: 'flex' }}
-              columns={1}
-              iconSize={4}
-              flex="1"
-              py="0"
-              ps="0"
-              maxW={{ base: '100%', xl: '80%' }}
-              features={siteConfig.signup.features.map((feature) => ({
-                iconPosition: 'left',
-                variant: 'left-icon',
-
-                ...feature,
-              }))}
-            />
+            </NextLink> */}
+            <Wrap
+            borderRadius={500}
+             >
+              {siteConfig.signup.monkeys}
+            </Wrap>
           </Box>
           <Center height="100%" flex="1">
             <Box width="container.sm" pt="8" px="8">
