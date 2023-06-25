@@ -8,6 +8,7 @@ import { Logo } from './logo'
 const siteConfig = {
   logo: Logo,
   seo: {
+    logo: '/static/favicons/LogoMA.png',
     title: 'Descuentify',
     description: 'Tarjetas de fidelizacion online',
   } as NextSeoProps,

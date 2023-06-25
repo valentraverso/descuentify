@@ -8,21 +8,21 @@ export default class Document extends NextDocument {
       <Html lang="en">
         <Head>
           <link
-            rel="apple-touch-icon"
+            rel="logo"
             sizes="76x76"
-            href="/static/favicons/apple-touch-icon.png"
+            href="LogoMA.png"
           />
           <link
-            rel="icon"
+            rel="logo"
             type="image/png"
             sizes="32x32"
-            href="/static/favicons/favicon-32x32.png"
+            href="LogoMA.png"
           />
           <link
-            rel="icon"
+            rel="logo"
             type="image/png"
             sizes="16x16"
-            href="/static/favicons/favicon-16x16.png"
+            href="LogoMA.png"
           />
           <link rel="manifest" href="/static/favicons/manifest.json" />
         </Head>
