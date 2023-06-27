@@ -22,14 +22,6 @@ const SectionTitle = {
         color: mode('gray.500', 'white')(props),
       },
     }),
-    dark: {
-      title: {
-        color: 'white',
-      },
-      description: {
-        color: 'white',
-      },
-    },
     light: (props: any) => ({
       title: {
         color: 'white',
@@ -38,6 +30,14 @@ const SectionTitle = {
         color: 'gray.200',
       },
     }),
+  },
+  dark: {
+    title: {
+      color: 'white',
+    },
+    description: {
+      color: 'white',
+    },
   },
   defaultProps: {
     variant: 'default',

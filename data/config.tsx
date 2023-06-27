@@ -2,7 +2,7 @@ import { Button } from '@chakra-ui/react'
 import { Link } from '@saas-ui/react'
 import { NextSeoProps } from 'next-seo'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
-import { FiCheck } from 'react-icons/fi'
+import { FiCheck, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { Logo } from './logo'
 
 const siteConfig = {
@@ -29,10 +29,6 @@ const siteConfig = {
         label: 'FAQ',
       },
       {
-        label: 'Login',
-        href: '/login',
-      },
-      {
         label: 'Sign Up',
         href: '/signup',
         variant: 'green',
@@ -42,22 +38,21 @@ const siteConfig = {
   footer: {
     copyright: (
       <>
-        {/* Built by{' '}
-        <Link href="https://twitter.com/Pagebakers">Eelco Wiersma</Link> */}
+        
       </>
     ),
     links: [
       {
-        href: 'mailto:hello@saas-ui.dev',
+        href: 'descuentifyapp@gmail.com',
         label: 'Contact',
       },
       {
-        href: 'https://twitter.com/saas_js',
-        label: <FaTwitter size="14" />,
+        href: 'https://www.linkedin.com/company/descuentify/',
+        label: <FiLinkedin size="14" />,
       },
       {
-        href: 'https://github.com/saas-js/saas-ui',
-        label: <FaGithub size="14" />,
+        href: 'https://github.com/descuentifyapp',
+        label: <FiGithub size="14" />,
       },
     ],
   },

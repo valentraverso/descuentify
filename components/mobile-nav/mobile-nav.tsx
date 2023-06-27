@@ -98,7 +98,6 @@ export function MobileNavContent(props: MobileNavContentProps) {
       })
     }
   }, [isOpen])
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -132,6 +131,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
                 <Stack alignItems="stretch" spacing="0">
                   {siteConfig.header.links.map(
                     ({ href, id, label, ...props }, i) => {
+                      console.log('label', label)
                       return (
                         <NavLink
                           href={href || `/#${id}`}

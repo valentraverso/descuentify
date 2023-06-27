@@ -3,7 +3,7 @@ import { HStack, Text } from '@chakra-ui/react'
 export default {
   title: 'Precios',
   description:
-    'Encuentra un plan para potenciar tu negocio',
+    'Encuentra el plan para potenciar tu negocio',
   plans: [
     {
       id: 'COOPER',
@@ -23,7 +23,7 @@ export default {
         
       ],
       action: {
-        href: '#',
+        href: '/signup',
       },
     },
     {
@@ -56,7 +56,7 @@ export default {
         },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Single%20license',
+        href: '/signup',
       },
     },
     {
@@ -97,7 +97,7 @@ export default {
         },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Unlimited%20license',
+        href: '/signup',
       },
     },
   ],
