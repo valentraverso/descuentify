@@ -11,6 +11,13 @@ export interface FormProp {
     phoneNumber: string,
 }
 
+
+export type NotionResponse = {
+    data:  {}
+    status: boolean
+
+} | undefined;
+
 export const FormSignup = () => {
 
     const toast = useToast()
@@ -49,25 +56,28 @@ export const FormSignup = () => {
 
         
         // console.log('SUBMIT', value)
-        const data = await sendToNotion(value)
+        const data : NotionResponse = await sendToNotion(value)
+
         console.log('DATA',data)
-        data==false&& toast({
-            title: 'Lo sentimos, ha ocurrido un error',
-            description: "Recomendamos actualizar la pagina",
-            status: 'error',
-            duration: 9000,
-            isClosable: true,
-        });
         
-        
-        data==true&&toast({
-            title: 'En breve nos contactaremos contigo!',
-            description: "Recibiras un mail con acceso a nuestra demo.",
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
-        });
-        console.log('DATA',data)
+        if(data != undefined){
+            data.status==false&& toast({
+                title: 'Lo sentimos, ha ocurrido un error',
+                description: "Recomendamos actualizar la pagina",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            });
+            
+            
+            data.status==true&&toast({
+                title: 'En breve nos contactaremos contigo!',
+                description: "Recibiras un mail con acceso a nuestra demo.",
+                status: 'success',
+                duration: 9000,
+                isClosable: true,
+            });
+        }
 
     }
 

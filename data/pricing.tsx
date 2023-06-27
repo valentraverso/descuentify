@@ -8,7 +8,7 @@ export default {
     {
       id: 'COOPER',
       title: 'COPPER',
-      description: 'Fideliza a clientes con nuestras tarjetas de fidelizacion',
+      description: 'Recompensa a tus clientes con nuestras tarjetas de fidelizacion',
       price: '¡Gratis!',
       features: [
         {

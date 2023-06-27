@@ -117,7 +117,7 @@ const HeroSection: React.FC = () => {
 
               <ButtonGroup spacing={4} alignItems="center" >
                 <ButtonLink colorScheme="green" size="lg" href="/signup">
-                  Sign Up
+                  Contactar
                 </ButtonLink>
                 <ButtonLink
                   size="lg"
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  Demo 
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>

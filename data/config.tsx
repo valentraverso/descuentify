@@ -22,14 +22,14 @@ const siteConfig = {
       },
       {
         id: 'pricing',
-        label: 'Pricing',
+        label: 'Precios',
       },
       {
         id: 'faq',
         label: 'FAQ',
       },
       {
-        label: 'Sign Up',
+        label: 'Contactar',
         href: '/signup',
         variant: 'green',
       },
