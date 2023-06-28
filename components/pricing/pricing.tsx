@@ -70,7 +70,7 @@ export const Pricing: React.FC<PricingProps> = (props) => {
                 )}
               </PricingFeatures>
               <ButtonLink colorScheme="green" {...plan.action}>
-                {plan.action.label || "Sign Up"}
+                {plan.action.label || "Contactar"}
               </ButtonLink>
             </PricingBox>
           ))}

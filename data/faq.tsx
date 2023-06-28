@@ -8,7 +8,7 @@ const faq = {
       q: '¿Es complicado implementar Descuentify en mi negocio?',
       a: (
         <>
-           la implementación de Descuentify es simple y rápida. Nuestra app proporciona una interfaz intuitiva y herramientas fáciles de usar para configurar tu programa de fidelización en minutos.<br /> Solo deberas descargar el QR!
+           La implementación de Descuentify es simple y rápida. Nuestra app proporciona una interfaz intuitiva y herramientas fáciles de usar para configurar tu programa de fidelización en minutos.<br /> Solo deberas descargar el QR!
         </>
       ),
     },

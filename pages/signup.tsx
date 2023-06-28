@@ -6,10 +6,11 @@ import { Features } from 'components/features'
 import { BackgroundGradient } from 'components/gradients/background-gradient'
 import { Section } from 'components/section'
 import siteConfig from 'data/config'
-import { Button,  } from '@chakra-ui/react'
+import { Button, } from '@chakra-ui/react'
 import { FaGithub, FaGoogle } from 'react-icons/fa'
 import { PageTransition } from 'components/motion/page-transition'
 import React from 'react'
+import { FormSignup } from 'components/signup'
 
 const providers = {
   google: {
@@ -25,15 +26,9 @@ const providers = {
 
 const Login: NextPage = () => {
 
-  const [value, setValue] = React.useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
-  })
-  const handleChange = (event) => setValue(event.target.value)
-
+  
   return (
-    <Section height="100vh" innerWidth="container.xl">
+    <Section height="125vh" innerWidth="container.xl">
       <BackgroundGradient
         zIndex="-1"
         width={{ base: 'full', lg: '50%' }}
@@ -49,77 +44,37 @@ const Login: NextPage = () => {
         <Stack
           width="100%"
           alignItems={{ base: 'center', lg: 'flex-start' }}
-          spacing="20"
+          spacing="15"
           flexDirection={{ base: 'column', lg: 'row' }}
         >
-          <Box 
-          borderRadius={50}
-          pe="20">
-            {/* <NextLink href="/">
-              <Box
-                as={siteConfig.logo}
-                width="160px"
-                ms="4"
-                mb={{ base: 0, lg: 16 }}
-              />
-            </NextLink> */}
+          <Box
+            maxW='md'
+            borderRadius={50}
+            p="10">
             <Wrap
-            borderRadius={500}
-             >
+              m='30px'
+            >
+              <NextLink href="/">
+                <Box
+                  as={siteConfig.logo}
+                  width="160px"
+                  ms="4"
+                  mb={{ base: 0, lg: 16 }}
+                />
+              </NextLink>
+
+            </Wrap>
+
+            <Wrap
+              maxW='md'
+              borderRadius={500}
+            >
               {siteConfig.signup.monkeys}
             </Wrap>
           </Box>
           <Center height="100%" flex="1">
-            <Box width="container.sm" pt="8" px="8">
-              <FormControl isRequired>
-                <Stack spacing={8}>
-                  <Stack spacing={1}>
-                    <FormLabel>Nombre</FormLabel>
-
-                    <Input
-                      value={value.name}
-                      focusBorderColor='green'
-                      onChange={handleChange}
-                      errorBorderColor='red.300'
-                      placeholder='Nombre'
-                      size='lg' />
-                  </Stack>
-                  <Stack spacing={1}>
-
-                    <FormLabel>Email</FormLabel>
-                    <Input
-                      type='email'
-                      value={value.email}
-                      focusBorderColor='green'
-                      onChange={handleChange}
-                      errorBorderColor='red.300'
-                      placeholder='Email'
-
-                      size='lg'
-                    />
-                    <FormHelperText>Nunca vamos a compartir tu email</FormHelperText>
-                  </Stack>
-
-                  <Stack spacing={1}>
-                    <FormLabel>Numero de telefono</FormLabel>
-                    <InputGroup>
-                      <InputLeftAddon children='+34' />
-                      <Input
-                        type='num'
-                        value={value.email}
-                        focusBorderColor='green'
-                        onChange={handleChange}
-                        errorBorderColor='red.300'
-                        placeholder='000 000 000' />
-                    </InputGroup>
-                  </Stack>
-                  <WrapItem >
-                    <Button colorScheme='green' variant='outline'>
-                      Submit
-                    </Button>
-                  </WrapItem>
-                </Stack>
-              </FormControl>
+            <Box maxW='md'mb="50" px="8">
+              <FormSignup />
             </Box>
           </Center>
         </Stack>

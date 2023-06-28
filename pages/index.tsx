@@ -117,11 +117,11 @@ const HeroSection: React.FC = () => {
 
               <ButtonGroup spacing={4} alignItems="center" >
                 <ButtonLink colorScheme="green" size="lg" href="/signup">
-                  Sign Up
+                  Contactar
                 </ButtonLink>
                 <ButtonLink
                   size="lg"
-                  href="https://demo.saas-ui.dev"
+                  href="/signup"
                   variant="outline"
                   rightIcon={
                     <Icon
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  Demo 
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
@@ -155,7 +155,7 @@ const HeroSection: React.FC = () => {
                 {/* change-img */}
                 <Image
                   src="/static/images/mobileapp.png"
-                  layout="fixed"
+                  //layout="fixed"
                   width={600}
                   height={600}
                   alt="Screenshot of Descuentify app"
@@ -364,7 +364,7 @@ const FeaturesSection = () => {
           title: "Amigable con el ecosistema.",
           icon: FiFeather,
           description:
-            "Includes multiple themes with darkmode support, always have the perfect starting point for your next project.",
+            "Empieza a cuidar el planeta avanzando a una etapa digital, dejando las tarjetas de carton en el pasado.",
           variant: "inline",
         },
       ]}

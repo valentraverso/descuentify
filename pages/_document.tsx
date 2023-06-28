@@ -5,26 +5,10 @@ import theme from '../theme'
 export default class Document extends NextDocument {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="es">
         <Head>
-          <link
-            rel="logo"
-            sizes="76x76"
-            href="LogoMA.png"
-          />
-          <link
-            rel="logo"
-            type="image/png"
-            sizes="32x32"
-            href="LogoMA.png"
-          />
-          <link
-            rel="logo"
-            type="image/png"
-            sizes="16x16"
-            href="LogoMA.png"
-          />
-          <link rel="manifest" href="/static/favicons/manifest.json" />
+          <link rel="icon" type="image/x-icon" href="/public/static/favicons/LogoMA.png" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

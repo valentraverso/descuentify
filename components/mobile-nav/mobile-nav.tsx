@@ -28,7 +28,8 @@ import { RemoveScroll } from 'react-remove-scroll'
 
 import siteConfig from 'data/config'
 import { Logo } from 'components/layout/logo'
-import { Link } from '@saas-ui/react'
+//import { Link } from '@saas-ui/react'
+import { Link } from '@chakra-ui/react'
 
 interface NavLinkProps extends LinkProps {
   label: string
@@ -43,7 +44,9 @@ function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
   const [, group] = href?.split('/') || []
   isActive = isActive ?? pathname.includes(group)
 
+  console.log('label', children)
   return (
+
     <Link
       href={href}
       display="inline-flex"
@@ -98,7 +101,6 @@ export function MobileNavContent(props: MobileNavContentProps) {
       })
     }
   }, [isOpen])
-
   return (
     <AnimatePresence>
       {isOpen && (

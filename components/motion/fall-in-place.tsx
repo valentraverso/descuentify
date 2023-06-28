@@ -11,7 +11,7 @@ export const FallInPlace: React.FC<MotionBoxProps & { delay?: number }> = (
       animate={{ scale: 1, opacity: 1, translateY: 0 }}
       transition={{
         type: 'tween',
-        ease: 'easeOut',
+        ease: 'easeInOut',
         duration: 2,
         delay,
       }}
