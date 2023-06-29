@@ -1,9 +1,10 @@
+import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { Button, FormControl, FormHelperText, FormLabel, Input, InputGroup, Stack, WrapItem, useToast } from "@chakra-ui/react";
 import { sendToNotion } from "pages/api/sendToNotion";
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export interface FormProp {
+export type FormProp = {
     name: string,
     lastname: string,
     companyName: string,
@@ -18,6 +19,18 @@ export type NotionResponse = {
 
 } | undefined;
 
+type Repo = {
+    name: string
+    stargazers_count: number
+  }
+   
+  export const getServerSideProps: GetServerSideProps<{
+    repo: Repo
+  }> = async () => {
+    const res = await fetch('https://api.github.com/repos/vercel/next.js')
+    const repo = await res.json()
+    return { props: { repo } }
+  }
 export const FormSignup = () => {
 
     const toast = useToast()
