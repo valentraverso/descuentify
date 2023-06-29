@@ -1,5 +1,5 @@
 import { Center } from '@chakra-ui/react'
-import { Auth, Link } from '@saas-ui/react'
+import { Link } from '@saas-ui/react'
 import { BackgroundGradient } from 'components/gradients/background-gradient'
 import { PageTransition } from 'components/motion/page-transition'
 import { Section } from 'components/section'
@@ -21,7 +21,7 @@ const providers = {
 const Login: NextPage = () => {
   return (
     <Section height="calc(100vh - 200px)" innerWidth="container.sm">
-      <BackgroundGradient zIndex="-1" />
+      {/* <BackgroundGradient zIndex="-1" />
 
       <Center height="100%" pt="20">
         <PageTransition width="100%">
@@ -31,7 +31,7 @@ const Login: NextPage = () => {
             signupLink={<Link href="/signup">Contactar</Link>}
           />
         </PageTransition>
-      </Center>
+      </Center> */}
     </Section>
   )
 }
