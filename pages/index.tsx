@@ -228,12 +228,12 @@ const HighlightsSection = () => {
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
-        name="TARJETA"
-        description="CEREZA"
-        avatar="/static/images/avatar.jpg"
+        name=""
+        description=""
+        avatar=""
         gradient={["pink.200", "green.500"]}
       >
-        “PONER UNA RECOMPENSA DE EJEMPLO”
+        <img src="/animations/card/card.gif" alt="tarjeta de fidelizacion"/>
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
