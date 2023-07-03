@@ -9,7 +9,7 @@ import {
   HStack,
 } from '@chakra-ui/react'
 
-import { Link, LinkProps } from '@saas-ui/react'
+import { LinkProps } from '@saas-ui/react'
 
 import siteConfig from 'data/config'
 
@@ -35,11 +35,22 @@ export const Footer: React.FC<FooterProps> = (props) => {
             <Copyright>{siteConfig.footer.copyright}</Copyright>
           </Stack>
           <HStack justify="flex-end" spacing="4" alignSelf="flex-end">
-            {siteConfig.footer?.links?.map(({ href, label }) => (
-              <FooterLink key={href} href={href}>
-                {label}
-              </FooterLink>
-            ))}
+            <Link href="https://www.linkedin.com/company/descuentify/" target="_blank">
+              <Icon
+                as={FiLinkedin}
+                transform="translate(-5px)"
+                transitionProperty="common"
+                transitionDuration="normal"
+              />
+            </Link>
+            <Link href="https://www.instagram.com/descuentifyapp/?igshid=Y2IzZGU1MTFhOQ==" target="_blank">
+              <Icon
+                as={FiInstagram}
+                transform="translate(-5px)"
+                transitionProperty="common"
+                transitionDuration="normal"
+              />
+            </Link>
           </HStack>
         </SimpleGrid>
       </Container>
