@@ -7,11 +7,14 @@ import {
   Stack,
   Flex,
   HStack,
+  Icon
 } from '@chakra-ui/react'
 
-import { Link, LinkProps } from '@saas-ui/react'
+import { LinkProps } from '@saas-ui/react'
 
 import siteConfig from 'data/config'
+import Link from 'next/link'
+import { FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 export interface FooterProps extends BoxProps {
   columns?: number
@@ -35,11 +38,22 @@ export const Footer: React.FC<FooterProps> = (props) => {
             <Copyright>{siteConfig.footer.copyright}</Copyright>
           </Stack>
           <HStack justify="flex-end" spacing="4" alignSelf="flex-end">
-            {siteConfig.footer?.links?.map(({ href, label }) => (
-              <FooterLink key={href} href={href}>
-                {label}
-              </FooterLink>
-            ))}
+            <Link href="https://www.linkedin.com/company/descuentify/" target="_blank">
+              <Icon
+                as={FiLinkedin}
+                transform="translate(-5px)"
+                transitionProperty="common"
+                transitionDuration="normal"
+              />
+            </Link>
+            <Link href="https://www.instagram.com/descuentifyapp/?igshid=Y2IzZGU1MTFhOQ==" target="_blank">
+              <Icon
+                as={FiInstagram}
+                transform="translate(-5px)"
+                transitionProperty="common"
+                transitionDuration="normal"
+              />
+            </Link>
           </HStack>
         </SimpleGrid>
       </Container>
@@ -64,23 +78,5 @@ export const Copyright: React.FC<CopyrightProps> = ({
     <Text color="muted" fontSize="sm">
       {content || children}
     </Text>
-  )
-}
-
-export const FooterLink: React.FC<LinkProps> = (props) => {
-  const { children, ...rest } = props
-  return (
-    <Link
-      color="muted"
-      fontSize="sm"
-      textDecoration="none"
-      _hover={{
-        color: 'white',
-        transition: 'color .2s ease-in',
-      }}
-      {...rest}
-    >
-      {children}
-    </Link>
   )
 }
