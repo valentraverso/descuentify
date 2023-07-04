@@ -7,5 +7,5 @@ import { NotionRoute } from "./routes";
 console.log('INDEX')
 app.use(express.json());
 
-app.use("sendtonotion", NotionRoute);
+app.use("/sendtonotion", NotionRoute);
 

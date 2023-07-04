@@ -2,7 +2,7 @@ import { FormProp, NotionResponse } from "components/signup";
 import { Client } from "@notionhq/client";
 
 export async function sendToNotion(value: FormProp) {
- const url = 'https://zzezequiel-special-potato-57j6p44rrg5cpv56-3000.preview.app.github.dev';
+ const url = 'http://localhost:5503';
 
 
  console.log(value)
@@ -12,13 +12,22 @@ export async function sendToNotion(value: FormProp) {
 
     const options = {
       method: "POST",
+       headers: {
+        "Content-Type": "application/json",
+       },
       body: formData
     }
+try{
 
-    const res = await fetch(`${url}/sendtonotion/company`, options)
-    const data = await res.json();
-    console.log('DATA',data);
-    return data;
+  const res = await fetch(`${url}/server/sendtonotion/company`, options)
+  const data = await res.json();
+  console.log('DATA',data);
+  return data;
+}catch(error){
+  console.log(error)
+  return false
+};
+
 
 }
 
