@@ -19,18 +19,6 @@ export type NotionResponse = {
 
 } | undefined;
 
-type Repo = {
-    name: string
-    stargazers_count: number
-  }
-   
-  export const getServerSideProps: GetServerSideProps<{
-    repo: Repo
-  }> = async () => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js')
-    const repo = await res.json()
-    return { props: { repo } }
-  }
 export const FormSignup = () => {
 
     const toast = useToast()
@@ -43,6 +31,8 @@ export const FormSignup = () => {
         email: '',
         phoneNumber: '',
     })
+
+    
     const {
         register,
         handleSubmit,
@@ -51,25 +41,18 @@ export const FormSignup = () => {
         control
     } = useForm();
 
-    const sendInfo = async ({
-        name,
-        lastname,
-        companyName,
-        email,
-        phoneNumber
-    }) => {
-        setValue({
-            name: name,
-            lastname: lastname,
-            companyName: companyName,
-            email: email,
-            phoneNumber: phoneNumber
-
-        })
+    const sendInfo = async (dataForm) => {
+        // setValue((prev: any) => ({
+        //     name: name,
+        //     lastname: lastname,
+        //     companyName: companyName,
+        //     email: email,
+        //     phoneNumber: phoneNumber
+        // }))
 
         
         // console.log('SUBMIT', value)
-        const data : NotionResponse = await sendToNotion(value)
+        const data : NotionResponse = await sendToNotion(dataForm)
 
         console.log('DATA',data)
         

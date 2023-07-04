@@ -46,7 +46,7 @@ export default {
           title: 'Local destacado 🥈',
         },
         {
-          title: 'Reconpensas multi-local',
+          title: 'Recompensas multi-local',
         },
         
         null,
@@ -85,7 +85,7 @@ export default {
           title: 'Local destacado 🥇',
         },
         {
-          title: 'Reconpensas multi-local',
+          title: 'Recompensas multi-local',
         },
         {
           title: 'Integracion API',
