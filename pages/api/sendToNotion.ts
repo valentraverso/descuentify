@@ -5,7 +5,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 
 export async function sendToNotion(value: FormProp) {
-  const url = 'http://localhost:5503';
+  const url = process.env.NEXT_PUBLIC_API_URL;
   console.log(value)
   // const fetchToken = await fetch(`http://localhost:3000/pages/api/auth/getToken`);
   // const token = await fetchToken.json();
