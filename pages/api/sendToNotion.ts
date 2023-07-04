@@ -9,9 +9,9 @@ export async function sendToNotion(value: FormProp) {
   console.log(value)
   // const fetchToken = await fetch(`http://localhost:3000/pages/api/auth/getToken`);
   // const token = await fetchToken.json();
-  
 
- const token = await fetch(`http://localhost:3000/api/auth/getToken`)
+
+  const token = await fetch(`http://localhost:3000/api/auth/getToken`)
   const formData = new FormData()
   formData.append('name', value.name);
   formData.append('lastname', value.lastname);
