@@ -1,7 +1,7 @@
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import { Button, FormControl, FormHelperText, FormLabel, Input, InputGroup, Stack, WrapItem, useToast } from "@chakra-ui/react";
+import { Button, FormControl, FormHelperText, FormLabel, Input, InputGroup, Stack, WrapItem, useStatStyles, useToast } from "@chakra-ui/react";
 import { sendToNotion } from "pages/api/sendToNotion";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export type FormProp = {
@@ -14,13 +14,13 @@ export type FormProp = {
 
 
 export type NotionResponse = {
-    data:  {}
+    data: {}
     status: boolean
 
 } | undefined;
 
 export const FormSignup = () => {
-
+    const [isLoading, setIsLoading] = useState(false)
     const toast = useToast()
 
 
@@ -50,34 +50,43 @@ export const FormSignup = () => {
         //     phoneNumber: phoneNumber
         // }))
 
-        
+
         // console.log('SUBMIT', value)
+
+        setIsLoading(true);
         const data : NotionResponse = await sendToNotion(dataForm)
 
-        console.log('DATA',data)
-        
-        if(data != undefined){
-            data.status==false&& toast({
+        console.log('DATA', data)
+
+        if (data != undefined) {
+            if(data.status == false){
+             toast({
                 title: 'Lo sentimos, ha ocurrido un error',
                 description: "Recomendamos actualizar la pagina",
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
             });
-            
-            
-            data.status==true&&toast({
-                title: 'En breve nos contactaremos contigo!',
-                description: "Recibiras un mail con acceso a nuestra demo.",
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
-            });
+        };
+
+
+            if(data.status == true){
+                toast({
+                    title: 'En breve nos contactaremos contigo!',
+                    description: "Recibiras un mail con acceso a nuestra demo.",
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                });
+
+                setIsLoading(false)
+            }
         }
 
     }
 
     return (
+
         <form
             onSubmit={
                 handleSubmit((data: any) => {
@@ -172,13 +181,30 @@ export const FormSignup = () => {
                         </InputGroup>
                     </Stack>
                     <WrapItem >
-                        <Button
-                            colorScheme='green'
-                            variant='outline'
-                            type="submit"
-                        >
-                            Submit
-                        </Button>
+
+                        {
+                            isLoading
+                                ?
+                                <Button
+                                    isLoading
+                                    loadingText='Submitting'
+                                    colorScheme='teal'
+                                    variant='outline'
+                                >
+                                    Submit
+                                </Button>
+
+                                :
+                                <Button
+                                    colorScheme='green'
+                                    variant='outline'
+                                    type="submit"
+                                >
+                                    Submit
+                                </Button>
+
+                        }
+
                     </WrapItem>
                 </Stack>
             </FormControl>
