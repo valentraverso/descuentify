@@ -32,6 +32,7 @@ export const getServerSideProps: GetServerSideProps<{
     return { props: { repo } }
 }
 export const FormSignup = () => {
+    const [isLoading, setIsLoading] = useState(false)
     const toast = useToast()
 
 
@@ -189,22 +190,30 @@ export const FormSignup = () => {
                         </InputGroup>
                     </Stack>
                     <WrapItem >
-                        <Button
-                            isLoading
-                            loadingText='Submitting'
-                            colorScheme='green'
-                            variant='outline'
-                        >
-                            Submit
-                        </Button>
 
-                        {/* <Button
-                                colorScheme='green'
-                                variant='outline'
-                                type="submit"
-                            >
-                                Submit
-                            </Button> */}
+                        {
+                            isLoading
+                                ?
+                                <Button
+                                    isLoading
+                                    loadingText='Submitting'
+                                    colorScheme='teal'
+                                    variant='outline'
+                                >
+                                    Submit
+                                </Button>
+
+                                :
+                                <Button
+                                    colorScheme='green'
+                                    variant='outline'
+                                    type="submit"
+                                >
+                                    Submit
+                                </Button>
+
+                        }
+
                     </WrapItem>
                 </Stack>
             </FormControl>
