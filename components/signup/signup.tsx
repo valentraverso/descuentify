@@ -52,27 +52,35 @@ export const FormSignup = () => {
 
 
         // console.log('SUBMIT', value)
-        const data : NotionResponse = await sendToNotion(value)
+
+        setIsLoading(true);
+        const data : NotionResponse = await sendToNotion(dataForm)
 
         console.log('DATA', data)
 
         if (data != undefined) {
-            data.status == false && toast({
+            if(data.status == false){
+             toast({
                 title: 'Lo sentimos, ha ocurrido un error',
                 description: "Recomendamos actualizar la pagina",
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
             });
+        };
 
 
-            data.status == true && toast({
-                title: 'En breve nos contactaremos contigo!',
-                description: "Recibiras un mail con acceso a nuestra demo.",
-                status: 'success',
-                duration: 9000,
-                isClosable: true,
-            });
+            if(data.status == true){
+                toast({
+                    title: 'En breve nos contactaremos contigo!',
+                    description: "Recibiras un mail con acceso a nuestra demo.",
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true,
+                });
+
+                setIsLoading(false)
+            }
         }
 
     }
