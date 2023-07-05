@@ -1,7 +1,7 @@
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
-import { Button, FormControl, FormHelperText, FormLabel, Input, InputGroup, Stack, WrapItem, useToast } from "@chakra-ui/react";
+import { Button, FormControl, FormHelperText, FormLabel, Input, InputGroup, Stack, WrapItem, useStatStyles, useToast } from "@chakra-ui/react";
 import { sendToNotion } from "pages/api/sendToNotion";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export type FormProp = {
@@ -14,7 +14,7 @@ export type FormProp = {
 
 
 export type NotionResponse = {
-    data:  {}
+    data: {}
     status: boolean
 
 } | undefined;
@@ -22,17 +22,16 @@ export type NotionResponse = {
 type Repo = {
     name: string
     stargazers_count: number
-  }
-   
-  export const getServerSideProps: GetServerSideProps<{
+}
+
+export const getServerSideProps: GetServerSideProps<{
     repo: Repo
-  }> = async () => {
+}> = async () => {
     const res = await fetch('https://api.github.com/repos/vercel/next.js')
     const repo = await res.json()
     return { props: { repo } }
-  }
+}
 export const FormSignup = () => {
-
     const toast = useToast()
 
 
@@ -67,23 +66,23 @@ export const FormSignup = () => {
 
         })
 
-        
-        // console.log('SUBMIT', value)
-        const data : NotionResponse = await sendToNotion(value)
 
-        console.log('DATA',data)
-        
-        if(data != undefined){
-            data.status==false&& toast({
+        // console.log('SUBMIT', value)
+        const data: NotionResponse = await sendToNotion(value)
+
+        console.log('DATA', data)
+
+        if (data != undefined) {
+            data.status == false && toast({
                 title: 'Lo sentimos, ha ocurrido un error',
                 description: "Recomendamos actualizar la pagina",
                 status: 'error',
                 duration: 9000,
                 isClosable: true,
             });
-            
-            
-            data.status==true&&toast({
+
+
+            data.status == true && toast({
                 title: 'En breve nos contactaremos contigo!',
                 description: "Recibiras un mail con acceso a nuestra demo.",
                 status: 'success',
@@ -95,6 +94,7 @@ export const FormSignup = () => {
     }
 
     return (
+
         <form
             onSubmit={
                 handleSubmit((data: any) => {
@@ -190,12 +190,21 @@ export const FormSignup = () => {
                     </Stack>
                     <WrapItem >
                         <Button
+                            isLoading
+                            loadingText='Submitting'
                             colorScheme='green'
                             variant='outline'
-                            type="submit"
                         >
                             Submit
                         </Button>
+
+                        {/* <Button
+                                colorScheme='green'
+                                variant='outline'
+                                type="submit"
+                            >
+                                Submit
+                            </Button> */}
                     </WrapItem>
                 </Stack>
             </FormControl>
