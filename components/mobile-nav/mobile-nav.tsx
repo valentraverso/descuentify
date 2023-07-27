@@ -16,6 +16,15 @@ import {
   useBreakpointValue,
   useColorModeValue,
   useUpdateEffect,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalCloseButton,
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ButtonGroup,
 } from '@chakra-ui/react'
 import { AnimatePresence, motion, useElementScroll } from 'framer-motion'
 import useRouteChanged from 'hooks/use-route-changed'
@@ -30,6 +39,8 @@ import siteConfig from 'data/config'
 import { Logo } from 'components/layout/logo'
 //import { Link } from '@saas-ui/react'
 import { Link } from '@chakra-ui/react'
+import { Nav } from '@saas-ui/react'
+import { ButtonLink } from 'components/button-link'
 
 interface NavLinkProps extends LinkProps {
   label: string
@@ -75,7 +86,7 @@ interface MobileNavContentProps {
 }
 
 export function MobileNavContent(props: MobileNavContentProps) {
-  const { isOpen, onClose = () => {} } = props
+  const { isOpen, onClose = () => { } } = props
   const closeBtnRef = React.useRef<HTMLButtonElement>(null)
   const { pathname } = useRouter()
   const bgColor = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
@@ -101,6 +112,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
       })
     }
   }, [isOpen])
+  const { isOpen: isModal, onOpen, onClose: notModal } = useDisclosure()
   return (
     <AnimatePresence>
       {isOpen && (
@@ -132,6 +144,29 @@ export function MobileNavContent(props: MobileNavContentProps) {
                   </HStack>
                 </Flex>
                 <Stack alignItems="stretch" spacing="0">
+                  <NavLink onClick={onOpen}>
+                    Login
+                  </NavLink>
+                  <Modal isCentered isOpen={isModal} onClose={notModal}>
+                    <ModalOverlay />
+                    <ModalContent>
+                      <ModalHeader textAlign="center">¿Quien eres?</ModalHeader>
+                      <ModalCloseButton />
+                      <ButtonGroup spacing={4} alignItems="center" >
+                        <ButtonLink colorScheme='blue' variant='outline' size="lg" ml={100} href="https://app.descuentifyapp.com">
+                          Usuario
+                        </ButtonLink>
+                        <ButtonLink colorScheme='green' variant='outline' size="lg" href="https://client.descuentifyapp.com">
+                          Empresa
+                        </ButtonLink>
+                      </ButtonGroup>
+                      <ModalFooter>
+                        <>
+
+                        </>
+                      </ModalFooter>
+                    </ModalContent>
+                  </Modal>
                   {siteConfig.header.links.map(
                     ({ href, id, label, ...props }, i) => {
                       return (
