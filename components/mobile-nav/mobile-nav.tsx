@@ -144,7 +144,7 @@ export function MobileNavContent(props: MobileNavContentProps) {
                   </HStack>
                 </Flex>
                 <Stack alignItems="stretch" spacing="0">
-                  <NavLink onClick={onOpen}>
+                  <NavLink {...(props as any)} onClick={onOpen}>
                     Login
                   </NavLink>
                   <Modal isCentered isOpen={isModal} onClose={notModal}>
