@@ -1,0 +1,38 @@
+name: Deploy
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Copy repository contents via scp
+      uses: appleboy/scp-action@master
+      with:
+        HOST: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.CLOUDPANEL_SSH_PRIVATE_KEY }}
+        source: "."
+        target: "./htdocs/descuentifyapp.com"
+
+    - name: Executing remote command
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PORT: ${{ secrets.PORT }}
+        KEY: ${{ secrets.CLOUDPANEL_SSH_PRIVATE_KEY }}
+        script: |
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
+          npm --help
+          cd ./htdocs/descuentifyapp.com
+          npm i
+          npx patch-package jwks-rsa
+          npm run build
+          npm run start
