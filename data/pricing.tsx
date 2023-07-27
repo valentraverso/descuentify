@@ -23,7 +23,7 @@ export default {
         
       ],
       action: {
-        href: '/signup',
+        href: 'https://client.descuentifyapp.com',
       },
     },
     {
@@ -56,7 +56,7 @@ export default {
         },
       ],
       action: {
-        href: '/signup',
+        href: '/contact',
       },
     },
     {
@@ -97,7 +97,7 @@ export default {
         },
       ],
       action: {
-        href: '/signup',
+        href: '/contact',
       },
     },
   ],
