@@ -17,6 +17,14 @@ import {
   IconButton,
   VStack,
   Flex,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalCloseButton,
+  ModalBody,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
 
@@ -86,6 +94,7 @@ const Home: NextPage = () => {
 };
 
 const HeroSection: React.FC = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" />
@@ -110,18 +119,18 @@ const HeroSection: React.FC = () => {
           >
             <FallInPlace delay={0.8}>
               <HStack pt="4" pb="12" spacing="8">
-              <FallInPlace delay={0.4} fontWeight="black">
-                <Em pr={2}>|</Em> Hacer que vuelvas
-              </FallInPlace>
+                <FallInPlace delay={0.4} fontWeight="black">
+                  <Em pr={2}>|</Em> Hacer que vuelvas
+                </FallInPlace>
               </HStack>
 
               <ButtonGroup spacing={4} alignItems="center" >
-                <ButtonLink colorScheme="green" size="lg" href="/signup">
-                  Contactar
-                </ButtonLink>
+                <Button colorScheme="green" size="lg" onClick={onOpen}>
+                  Sign up
+                </Button>
                 <ButtonLink
                   size="lg"
-                  href="/signup"
+                  href="/contact"
                   variant="outline"
                   rightIcon={
                     <Icon
@@ -136,10 +145,30 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  Demo 
+                  Demo
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
+            <Modal isCentered  isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader textAlign="center">¿Quien eres?</ModalHeader>
+                <ModalCloseButton />
+                  <ButtonGroup spacing={4} alignItems="center" >
+                    <ButtonLink colorScheme='blue' variant='outline' size="lg" ml={100} href="https://app.descuentifyapp.com">
+                      Usuario
+                    </ButtonLink>
+                    <ButtonLink colorScheme='green' variant='outline' size="lg"  href="https://client.descuentifyapp.com">
+                      Empresa
+                    </ButtonLink>
+                  </ButtonGroup>
+                <ModalFooter>
+                 <>
+                 
+                 </>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
           </Hero>
           <Box
             height="600px"
@@ -214,17 +243,17 @@ const HighlightsSection = () => {
       <HighlightsItem colSpan={[1, null, 2]} title="Nuestra mision">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-           
+
             Descuentify tiene como objetivo recompensar la lealtad de los clientes a través de recompensas especiales y descuentos exclusivos. Sabemos que en un mercado competitivo como el actual, los consumidores tienen muchas opciones. Reconocer y recompensar su lealtad es fundamental para mantenerlos comprometidos con una marca en particular.
           </Text>
 
-          
+
         </VStack>
       </HighlightsItem>
 
       <HighlightsItem title="Tarjetas de fidelizacion">
         <Text color="muted" fontSize="lg">
-        Las tarjetas de fidelización online permiten a los usuarios acumular puntos mediante el escaneo de códigos QR.
+          Las tarjetas de fidelización online permiten a los usuarios acumular puntos mediante el escaneo de códigos QR.
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
@@ -233,7 +262,7 @@ const HighlightsSection = () => {
         avatar=""
         gradient={["pink.200", "green.500"]}
       >
-        <img src="/animations/card/card.gif" alt="tarjeta de fidelizacion"/>
+        <img src="/animations/card/card.gif" alt="tarjeta de fidelizacion" />
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
@@ -356,8 +385,8 @@ const FeaturesSection = () => {
         {
           title: "Internacional.",
           icon: FiMap,
-          description: 
-          "Brindar recompensas en cualquier país. Premia a tus clientes en todo el mundo con regalos especiales.",
+          description:
+            "Brindar recompensas en cualquier país. Premia a tus clientes en todo el mundo con regalos especiales.",
           variant: "inline",
         },
         {
