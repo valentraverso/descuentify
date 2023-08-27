@@ -32,7 +32,6 @@ jobs:
           source ~/.nvm/nvm.sh
           npm --help
           cd ./htdocs/descuentifyapp.com
-          npm i
-        
+          npm i     
           npm run build
           npm run start
