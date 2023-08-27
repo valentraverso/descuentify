@@ -33,6 +33,6 @@ jobs:
           npm --help
           cd ./htdocs/descuentifyapp.com
           npm i
-          npx patch-package jwks-rsa
+        
           npm run build
           npm run start
