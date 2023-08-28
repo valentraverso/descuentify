@@ -25,7 +25,7 @@ jobs:
           export NVM_DIR=~/.nvm
           source ~/.nvm/nvm.sh
           cd htdocs/descuentifyapp.com
-          ls
           npm i
           npx patch-package
-          npm run server
+          npm run build
+          npm run start
