@@ -28,4 +28,4 @@ jobs:
           npm i
           npx patch-package
           npm run build
-          npm run start
+          npx serve@latest out
