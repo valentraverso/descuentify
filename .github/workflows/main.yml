@@ -22,8 +22,8 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.CLOUDPANEL_SSH_PRIVATE_KEY }}
         script: |
-          ls
           cd htdocs/descuentifyapp.com
+          ls
           npm i
           npx patch-package
           npm run server
