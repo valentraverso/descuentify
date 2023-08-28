@@ -23,7 +23,7 @@ jobs:
         KEY: ${{ secrets.CLOUDPANEL_SSH_PRIVATE_KEY }}
         script: |
           ls
-          cd ./htdocs/descuentifyapp.com
+          cd htdocs/descuentifyapp.com
           npm i
           npx patch-package
           npm run server
